@@ -1,0 +1,78 @@
+\section{Results}
+
+\subsection{Quantitative Comparison}
+\input{tables/main_metrics}
+
+\input{tables/category_metrics}
+
+Figure~\ref{fig:curves} shows the shot scaling. We report mean and standard
+deviation over seeds. The template baseline is highly sensitive to appearance
+variation and receives little benefit from additional references because all
+references are treated as raw pixels. AnomalyDINO benefits more consistently
+from additional normal views because rotation augmentation and patch-level
+matching approximate the local normal manifold.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/image_auroc_vs_shots.png}\\
+\includegraphics[width=\linewidth]{figures/pixel_auroc_vs_shots.png}
+\caption{Image-level AUROC and patch-level pixel AUROC across shot counts.
+Error bars show one standard deviation over three seeds.}
+\label{fig:curves}
+\end{figure}
+
+\subsection{Effect of Multi-Layer Fusion}
+The improvement is intentionally conservative. It changes only how patch
+features are formed, allowing any change in AUROC, AP, or localization to be
+attributed to the use of blocks 9 and 11. We report both positive and negative
+effects. If image AUROC changes little while localization improves, this
+indicates that earlier spatial detail mainly sharpens the anomaly map; if the
+opposite occurs, the added layer introduces background texture that competes
+with semantic evidence.
+
+\subsection{Per-Category Behavior}
+Large object categories such as candle provide many possible normal poses and
+backgrounds, while small-object categories often have less appearance
+variation but finer defects. The category table exposes this heterogeneity and
+prevents one easy category from dominating the aggregate result. A high
+standard deviation indicates that the chosen few references are not
+interchangeable, which is a central practical risk in few-shot inspection.
+
+\subsection{Qualitative Localization}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/qualitative_example.png}
+\caption{A representative input, ground-truth mask, patch anomaly map, and
+overlay. The heatmap is produced directly from AnomalyDINO distances.}
+\label{fig:qualitative}
+\end{figure}
+
+Figure~\ref{fig:qualitative} shows how patch retrieval localizes an anomalous
+region without any anomaly training labels. The map is intentionally coarse:
+one cell covers a $14\times14$ region before upsampling. This is sufficient
+for many missing-component and contamination defects but limits sub-pixel or
+wire-thin defects.
+
+\subsection{Difficult Cases}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.96\textwidth]{figures/failure_grid.png}
+\caption{Representative difficult examples selected from the actual test
+errors: low-scoring defects and high-scoring normal images. Rows are not
+constructed manually; cases are ranked by their unthresholded anomaly scores.}
+\label{fig:failures}
+\end{figure*}
+
+Figure~\ref{fig:failures} separates two error mechanisms. Low-scoring defects
+are often small or visually similar to legitimate texture variation.
+High-scoring normal images usually contain a pose, reflection, or boundary
+change that is represented by too few reference views. This motivates future
+work on calibrated selective prediction and object-specific foreground masks.
+
+\subsection{Efficiency}
+\input{tables/efficiency}
+
+The improvement retains the same backbone and memory size, so its parameter
+count and peak memory are nearly identical to the official method. The
+additional cost is confined to extracting one earlier transformer block; the
+nearest-neighbor database dimension remains 384.

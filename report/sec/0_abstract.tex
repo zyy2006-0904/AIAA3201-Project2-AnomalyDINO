@@ -1,0 +1,18 @@
+\begin{abstract}
+Industrial visual inspection must recognize rare defects even when only a
+handful of defect-free examples are available. This project studies few-shot
+anomaly detection on six VisA categories. We first build a template-difference
+baseline that compares each product image with its closest normal reference.
+We then reproduce AnomalyDINO with a frozen DINOv2 ViT-S/14 backbone at
+$448\times448$ resolution and agnostic preprocessing. A transparent
+multi-layer improvement fuses normalized patch features from transformer blocks
+9 and 11 before nearest-neighbor retrieval. All methods use the same official
+1-class split, reference filenames, calibration images, and random seeds.
+We evaluate image-level detection and patch-level localization over
+1, 2, 4, and 8 shots with seeds 0, 1, and 2. The experiments show that frozen
+foundation features provide a large advantage over raw template differences,
+while combining a late semantic layer with an earlier spatial layer changes the
+trade-off between anomaly detection and localization. The complete code,
+configuration files, saved reference lists, metrics, visualizations, and
+runnable demo are available at \url{\ProjectURL}.
+\end{abstract}

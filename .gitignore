@@ -1,0 +1,17 @@
+.venv/
+data/
+logs/
+*.pyc
+__pycache__/
+.pytest_cache/
+repo/AnomalyDINO/.git/
+repo/
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.fdb_latexmk
+report/*.fls
+report/*.log
+report/*.out
+report/*.synctex.gz
+demo_outputs/

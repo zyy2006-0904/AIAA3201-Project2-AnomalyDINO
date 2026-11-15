@@ -1,0 +1,37 @@
+[
+  {
+    "file": "/data/disk1/home/yzhang201/aiaa3201_project2/artifacts/failures_multilayer/01_fryum_bad_031.png",
+    "category": "fryum",
+    "sample": "bad/031.JPG",
+    "score": 0.12566,
+    "failure_type": "low-scoring defect"
+  },
+  {
+    "file": "/data/disk1/home/yzhang201/aiaa3201_project2/artifacts/failures_multilayer/02_fryum_bad_038.png",
+    "category": "fryum",
+    "sample": "bad/038.JPG",
+    "score": 0.13083,
+    "failure_type": "low-scoring defect"
+  },
+  {
+    "file": "/data/disk1/home/yzhang201/aiaa3201_project2/artifacts/failures_multilayer/03_fryum_bad_096.png",
+    "category": "fryum",
+    "sample": "bad/096.JPG",
+    "score": 0.13272,
+    "failure_type": "low-scoring defect"
+  },
+  {
+    "file": "/data/disk1/home/yzhang201/aiaa3201_project2/artifacts/failures_multilayer/04_pipe_fryum_good_400.png",
+    "category": "pipe_fryum",
+    "sample": "good/400.JPG",
+    "score": 0.29794,
+    "failure_type": "high-scoring normal"
+  },
+  {
+    "file": "/data/disk1/home/yzhang201/aiaa3201_project2/artifacts/failures_multilayer/05_pipe_fryum_good_352.png",
+    "category": "pipe_fryum",
+    "sample": "good/352.JPG",
+    "score": 0.29207,
+    "failure_type": "high-scoring normal"
+  }
+]

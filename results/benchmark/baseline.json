@@ -1,0 +1,11 @@
+{
+  "model": "dinov2_vits14",
+  "resolution": 448,
+  "layers": null,
+  "iterations": 50,
+  "mean_forward_seconds": 0.012160639720968902,
+  "images_per_second": 82.23251596506674,
+  "peak_allocated_gpu_mb": 113.54296875,
+  "peak_reserved_gpu_mb": 132.0,
+  "feature_extraction_included": true
+}

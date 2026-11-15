@@ -1,0 +1,45 @@
+\section{Related Work}
+
+\paragraph{Normal-only industrial anomaly detection.}
+MVTec AD established the modern evaluation setting with normal training
+images, anomalous test images, and pixel-accurate defect masks
+\cite{bergmann2019mvtec}. PaDiM models each spatial patch by a multivariate
+Gaussian distribution and uses the Mahalanobis distance for detection
+\cite{defard2021padim}. PatchCore stores a coreset of nominal patch features and
+performs nearest-neighbor matching, emphasizing high recall on unseen defects
+\cite{roth2022patchcore}. DRAEM learns discriminative reconstruction by
+synthesizing abnormal regions \cite{zavrtanik2021draem}, while CutPaste creates
+self-supervised anomalies through image cuts and pasting
+\cite{li2021cutpaste}. These methods show that local representations and
+carefully designed normality assumptions are more effective than global
+reconstruction alone.
+
+\paragraph{Foundation-model representations.}
+DINOv2 learns general-purpose visual features through self-supervised
+pretraining and produces patch descriptors that transfer well without
+fine-tuning \cite{oquab2024dinov2}. AnomalyDINO exploits these frozen features
+for few-shot retrieval and applies PCA-based foreground masking and rotation
+augmentation to make a small memory bank more robust
+\cite{damm2025anomalydino}. Its principal advantage is training-free operation:
+inference requires only a forward pass through the encoder and posterior
+nearest-neighbor search.
+
+\paragraph{Vision-language and efficient alternatives.}
+AnomalyCLIP aligns image regions with object-agnostic normal and abnormal
+prompts, enabling zero-shot transfer \cite{zhou2024anomalyclip}. EfficientAD
+targets millisecond-level inspection with a compact student-teacher design
+\cite{batzner2024efficientad}. The newer MVTec AD 2 benchmark expands the
+problem to harder lighting and contamination scenarios
+\cite{heckler2026mvtec2}. We use AnomalyCLIP only as related context because the
+required comparison is the template baseline, official AnomalyDINO, and one
+improved AnomalyDINO variant.
+
+\paragraph{Datasets and metrics.}
+VisA contains twelve industrial categories with high-resolution images and
+defect masks \cite{zou2022spotdiff}. Its official 1-class split trains on
+normal images only and evaluates both normal and anomalous test images.
+Image-level AUROC measures ranking quality independent of threshold. Pixel
+AUROC evaluates localization maps over all test images, including normal
+images whose masks are entirely zero. Because categories differ in defect
+frequency and scale, we average per-category metrics equally rather than
+pooling all pixels or images into one global score.

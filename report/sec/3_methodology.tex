@@ -1,0 +1,110 @@
+\section{Method}
+
+Figure~\ref{fig:pipeline} summarizes the three-stage pipeline. A small set of
+normal images is encoded once to form a category-specific memory. Test images
+are encoded by the same frozen model, background patches are suppressed, and
+each retained patch is compared against the memory. The resulting distances
+produce both a full anomaly map and an image score.
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 10mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+              text width=23mm, font=\scriptsize},
+  arr/.style={-{Latex[length=1.8mm]}, thick}
+]
+\node[box] (refs) {1/2/4/8\\normal references};
+\node[box, right=of refs] (enc1) {Frozen DINOv2\\patch encoder};
+\node[box, right=of enc1] (memory) {Normalized\\patch memory};
+\node[box, below=of refs] (test) {Test\\image};
+\node[box, right=of test] (enc2) {Frozen DINOv2\\patch encoder};
+\node[box, right=of enc2] (mask) {PCA background\\mask};
+\node[box, below=of memory] (knn) {Nearest-normal\\distance};
+\node[box, left=of knn] (map) {Patch anomaly\\map};
+\node[box, left=of map] (score) {Top-1\% score\\+ threshold};
+\draw[arr] (refs) -- (enc1);
+\draw[arr] (enc1) -- (memory);
+\draw[arr] (test) -- (enc2);
+\draw[arr] (enc2) -- (mask);
+\draw[arr] (memory) -- (knn);
+\draw[arr] (mask) |- (knn);
+\draw[arr] (knn) -- (map);
+\draw[arr] (map) -- (score);
+\node[draw, dashed, fit={(enc1) (enc2)}, inner sep=3mm,
+      label={[font=\scriptsize]above:Improved variant fuses blocks 9 and 11}] {};
+\end{tikzpicture}
+\caption{Anomaly inspection pipeline. The dashed region denotes the only
+improvement over the official backbone: normalized features from two
+transformer blocks are averaged before memory construction and retrieval.}
+\label{fig:pipeline}
+\end{figure*}
+
+\subsection{Template-Difference Baseline}
+For a category $c$, let $\mathcal{R}_{c,s,r}$ denote the $s$ normal references
+selected for seed $r$. The reference set is always the same across all three
+methods. Each image is resized to $448\times448$. For test image $I$, we
+compute
+\begin{equation}
+D_j(u,v)=\frac{1}{3}\sum_{k=1}^{3}\left|I_k(u,v)-R_{j,k}(u,v)\right|,
+\end{equation}
+where $R_j$ is the $j$-th reference. The closest template is
+$j^\star=\arg\min_j \operatorname{mean}_{u,v}D_j(u,v)$. The selected difference
+map is smoothed with a Gaussian kernel ($\sigma=4$) and the image score is the
+mean of its top one percent of pixels. This deliberately simple baseline
+captures obvious missing or added material but is sensitive to viewpoint and
+illumination.
+
+\subsection{AnomalyDINO Reproduction}
+DINOv2 converts each image into $N$ patch tokens
+$\mathbf{z}_i\in\mathbb{R}^{384}$ at the last transformer block. For the
+official reproduction, all tokens are L2-normalized and stored in a memory bank
+\begin{equation}
+\mathcal{M}=\{\bar{\mathbf{z}}_i \mid i\in\mathcal{R}_{c,s,r}\}.
+\end{equation}
+A PCA mask suppresses background patches based on the first principal component
+of the current image. For each retained test patch $\mathbf{x}_q$, we compute
+\begin{equation}
+d_q=\frac{1}{2}\min_{\mathbf{m}\in\mathcal{M}}
+\left\|\bar{\mathbf{x}}_q-\mathbf{m}\right\|_2^2
+=1-\cos\!\left(\bar{\mathbf{x}}_q,\mathbf{m}^\star\right).
+\end{equation}
+The patch distances are reshaped to the token grid. Following AnomalyDINO, the
+image score is the mean of the top one percent of patch distances. This
+aggregation is robust to isolated noisy patches while retaining sensitivity to
+small defects.
+
+The official agnostic preprocessing augments each reference with eight
+rotations and applies PCA masking to test images. At $448$ pixels,
+ViT-S/14 produces a $32\times32$ patch grid before masking. This coarse grid is
+the main source of localization error for thin defects.
+
+\subsection{Multi-Layer Feature Fusion}
+Late transformer blocks contain semantic information but discard much
+high-frequency spatial detail. Our improvement combines block 9 and block 11:
+\begin{equation}
+\mathbf{f}_i =
+\frac{1}{2}\left(
+\frac{\mathbf{z}^{(9)}_i}{\|\mathbf{z}^{(9)}_i\|_2}
++
+\frac{\mathbf{z}^{(11)}_i}{\|\mathbf{z}^{(11)}_i\|_2}
+\right).
+\end{equation}
+The fused vectors are again L2-normalized for cosine nearest-neighbor search.
+Everything else is unchanged: the same memory size, rotations, PCA mask,
+score aggregation, checkpoint, and evaluation code. This isolates the effect of
+multi-layer fusion. We expect the earlier layer to add boundary and texture
+sensitivity, while the final layer preserves stable object semantics.
+
+\subsection{Avoiding Reference and Threshold Leakage}
+For every category, the first 20 lexicographically sorted normal training files
+are reserved for threshold calibration. They never enter the memory bank or
+few-shot reference pool. Seed $r$ selects contiguous references after this
+prefix:
+\begin{equation}
+\mathcal{R}_{c,s,r} =
+\left\{\pi_{20+rs}(c),\ldots,\pi_{20+rs+s-1}(c)\right\},
+\end{equation}
+where $\pi(c)$ is the sorted training list. Exact filenames are saved for every
+run. The demo threshold is the 95th percentile of scores on the calibration
+images. AUROC uses unthresholded scores; scores are not rescaled per test image.

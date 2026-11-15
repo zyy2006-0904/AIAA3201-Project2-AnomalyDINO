@@ -1,0 +1,41 @@
+{
+  "image": "/data/disk1/home/yzhang201/aiaa3201_project2/data/VisA_pytorch/1cls/chewinggum/test/bad/000.JPG",
+  "category": "chewinggum",
+  "shot": 4,
+  "seed": 0,
+  "layers": [
+    9,
+    11
+  ],
+  "anomaly_score": 0.5722806453704834,
+  "calibration_threshold": 0.16420765221118927,
+  "decision": "NG",
+  "reference_images": [
+    "023.JPG",
+    "024.JPG",
+    "025.JPG",
+    "026.JPG"
+  ],
+  "calibration_images": [
+    "000.JPG",
+    "001.JPG",
+    "002.JPG",
+    "003.JPG",
+    "004.JPG",
+    "005.JPG",
+    "007.JPG",
+    "008.JPG",
+    "009.JPG",
+    "010.JPG",
+    "011.JPG",
+    "014.JPG",
+    "015.JPG",
+    "016.JPG",
+    "017.JPG",
+    "018.JPG",
+    "019.JPG",
+    "020.JPG",
+    "021.JPG",
+    "022.JPG"
+  ]
+}

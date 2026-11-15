@@ -1,0 +1,19 @@
+\section{Limitations}
+
+The study has four limitations. First, evaluation uses six categories, as
+required by the course handout, rather than all twelve VisA categories.
+Second, AnomalyDINO processes one image at a time in the official code. This
+preserves exact reproduction but leaves substantial GPU capacity unused during
+image decoding, PCA masking, and CPU nearest-neighbor search. Third,
+patch-level masks are evaluated on the native $32\times32$ token grid rather
+than after full-resolution TIFF upsampling, reflecting both the model's true
+localization granularity and the server's tight disk budget. Fourth, the
+multi-layer choice was fixed before test evaluation and is therefore not
+selected with test labels, but it is still a single architectural hypothesis;
+other layer pairs or learned scale weights may perform better.
+
+The template baseline is intentionally simple. More powerful alignment,
+foreground segmentation, or SSIM could improve it, but would also make the
+comparison less interpretable. Its purpose is to expose the gap between raw
+pixel correspondence and foundation-model patch retrieval, not to maximize
+performance.

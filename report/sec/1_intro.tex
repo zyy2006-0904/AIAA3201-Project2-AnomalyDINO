@@ -1,0 +1,45 @@
+\section{Introduction}
+
+Visual anomaly detection is a core component of automated industrial
+inspection. A detector must answer two questions: whether a product image is
+abnormal, and where the defect is located. Unlike ordinary image
+classification, the anomalous class is not available during training and its
+appearance can change from one defect to another. The realistic learning
+problem is therefore normal-only: model the distribution of defect-free
+appearance and flag samples that deviate from it.
+
+Recent methods address this problem in two broad ways. Reconstruction and
+synthesis methods learn to reproduce normal appearance or generate pseudo
+defects \cite{zavrtanik2021draem,li2021cutpaste}. Patch-distribution methods
+estimate compact normal statistics and compare local test features against
+them \cite{defard2021padim,roth2022patchcore}. Foundation-model approaches
+reuse frozen visual representations learned from much larger datasets. The
+last family is especially attractive in a few-shot setting because no
+task-specific training is required and the same encoder can be applied to
+different products.
+
+AnomalyDINO combines DINOv2 patch tokens with nearest-neighbor retrieval
+\cite{damm2025anomalydino,oquab2024dinov2}. Normal reference images populate a
+memory bank. Every patch of a test image is assigned the distance to its
+closest normal patch, and an image-level score is obtained from the strongest
+patch responses. This design naturally provides both a scalar decision and a
+spatial anomaly map. The remaining difficulty is that last-layer semantic
+features are relatively coarse: they separate obvious semantic anomalies but
+can blur thin scratches, small missing parts, and low-contrast contamination.
+
+This project makes three contributions. First, it implements the required
+template-difference baseline and exposes how pose, illumination, and
+background changes dominate raw pixel differences. Second, it builds a
+reproducible AnomalyDINO pipeline on the six categories specified by the course
+project, with calibration data excluded from every few-shot reference pool.
+Third, it implements a controlled multi-layer feature-fusion variant and
+evaluates it with identical data, references, preprocessing, input resolution,
+and seeds. We report image AUROC, image AP/F1, patch-level pixel AUROC/AP/F1,
+AUPRO, latency, and peak GPU memory.
+
+The full project also studies reliability. Rather than selecting a threshold
+from test labels, each category reserves the first 20 normal training images
+for calibration and uses their 95th percentile score as the demo OK/NG
+threshold. Test labels are touched only after all predictions have been made.
+This protocol is stricter than reporting AUROC alone and makes the demo
+decision reproducible.

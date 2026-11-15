@@ -1,0 +1,59 @@
+\section{Experiments}
+
+\subsection{Dataset and Protocol}
+We use six VisA categories required by the project: candle, capsules, cashew,
+chewinggum, fryum, and pipe\_fryum. Table~\ref{tab:dataset} summarizes the
+official 1-class split. The original 1.9 GB dataset remains read-only. We build
+the AnomalyDINO directory layout with symlinks and store only metadata,
+selected references, prediction maps, and results.
+
+\begin{table}[t]
+\centering
+\small
+\caption{VisA categories and official 1-class test counts.}
+\label{tab:dataset}
+\begin{tabular}{lrrr}
+\toprule
+Category & Train normal & Test normal & Test anomaly \\
+\midrule
+Candle      & 900 & 100 & 100 \\
+Capsules    & 542 & 60  & 100 \\
+Cashew      & 450 & 50  & 100 \\
+Chewinggum  & 453 & 50  & 100 \\
+Fryum       & 450 & 50  & 100 \\
+Pipe fryum  & 450 & 50  & 100 \\
+\midrule
+Total       & 3245 & 360 & 600 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All methods evaluate 1, 2, 4, and 8 normal references with seeds 0, 1, and 2.
+The same reference filenames are used for the template baseline, official
+AnomalyDINO, and multi-layer improvement. The first 20 normal images per
+category are excluded from these references.
+
+\subsection{Implementation Details}
+The backbone is the pretrained DINOv2 ViT-S/14 checkpoint with a 384-dimensional
+patch embedding and a smaller-edge size of 448 pixels. The backbone is frozen.
+Nearest-neighbor search uses exact L2 distance on normalized features and runs
+on CPU FAISS; the encoder runs on one NVIDIA RTX A6000. We use a batch size of
+one, matching the official implementation, and report whether feature
+extraction is included in timing.
+
+The prediction outputs are evaluated per category and then averaged with equal
+category weight. Image AUROC is the main metric. Pixel AUROC and AUPRO use all
+test images, including normal images with zero masks. Because full-resolution
+TIFF storage exceeded the safe free-space budget on the shared server, official
+AnomalyDINO maps are evaluated at their native $32\times32$ patch grid and masks
+are downsampled with nearest-neighbor interpolation. This is the prediction
+resolution actually produced by the model and is identical across the official
+and improved variants.
+
+\subsection{Efficiency Protocol}
+Peak GPU memory is measured after resetting CUDA statistics and loading the
+model. Mean inference time is read from per-image measurements and includes
+image loading, resizing, patch encoding, PCA masking, nearest-neighbor search,
+and score aggregation, but excludes one-time model loading. We also benchmark
+the encoder over 50 synchronized forward passes on a fixed $448\times448$
+image.

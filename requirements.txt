@@ -1,0 +1,14 @@
+torch==2.7.1
+torchvision==0.22.1
+opencv-python==4.11.0.86
+matplotlib==3.10.9
+Pillow==12.3.0
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+faiss-cpu==1.16.0
+tqdm==4.70.1
+tifffile==2025.5.10
+PyYAML==6.0.3
+pandas==2.3.3
+threadpoolctl==3.8.0

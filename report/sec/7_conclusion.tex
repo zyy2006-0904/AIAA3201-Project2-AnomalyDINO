@@ -1,0 +1,20 @@
+\section{Conclusion}
+
+We completed a reproducible few-shot anomaly-detection study on six VisA
+categories. The template baseline demonstrates why raw pixel differences are
+unreliable under pose and appearance variation. AnomalyDINO provides a strong
+training-free detector by matching DINOv2 patch features against a small normal
+memory. Our multi-layer variant tests whether combining semantic and spatial
+transformer blocks improves the detection-localization trade-off while keeping
+all other factors fixed.
+
+The project also provides an auditable experimental protocol: the 20
+calibration images are excluded from reference selection, exact filenames are
+saved, test labels are used only for final scoring, and every method shares the
+same references and seeds. This design supports both the quantitative report
+and the interactive OK/NG demonstration.
+
+Future work should batch the frozen encoder for higher throughput, learn a
+small calibration-only weighting over transformer layers, and add selective
+prediction so that ambiguous products are deferred to human inspection instead
+of being forced into OK or NG.
