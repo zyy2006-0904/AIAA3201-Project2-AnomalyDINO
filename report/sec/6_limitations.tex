@@ -5,9 +5,9 @@ required by the course handout, rather than all twelve VisA categories.
 Second, AnomalyDINO processes one image at a time in the official code. This
 preserves exact reproduction but leaves substantial GPU capacity unused during
 image decoding, PCA masking, and CPU nearest-neighbor search. Third,
-patch-level masks are evaluated on the native $32\times32$ token grid rather
-than after full-resolution TIFF upsampling, reflecting both the model's true
-localization granularity and the server's tight disk budget. Fourth, the
+localization maps are evaluated at $448\times448$ rather than original image
+resolution, and pixel AUROC uses a 16-bit monotonic rank histogram to keep the
+full experiment matrix tractable. Fourth, the
 multi-layer choice was fixed before test evaluation and is therefore not
 selected with test labels, but it is still a single architectural hypothesis;
 other layer pairs or learned scale weights may perform better.

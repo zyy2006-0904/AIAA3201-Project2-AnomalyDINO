@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8915742248706808,
+        "seg_AUROC": 0.9568932036744761,
+        "seg_F1": 0.3745743473325766,
+        "classification_AUROC": 0.9430999999999999,
+        "classification_AP": 0.9499626672473764,
+        "classification_F1": 0.9081632653061226
+    },
+    "capsules": {
+        "seg_AUPRO": 0.929842897206321,
+        "seg_AUROC": 0.9357716223092916,
+        "seg_F1": 0.4990980156343957,
+        "classification_AUROC": 0.9933333333333334,
+        "classification_AP": 0.9961272981814513,
+        "classification_F1": 0.98
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9738526176820739,
+        "seg_AUROC": 0.9851410602885413,
+        "seg_F1": 0.5344788605019217,
+        "classification_AUROC": 0.9640000000000001,
+        "classification_AP": 0.9806862868375336,
+        "classification_F1": 0.9405940594059405
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.956241204365102,
+        "seg_AUROC": 0.9941398796655627,
+        "seg_F1": 0.6401028277634963,
+        "classification_AUROC": 0.992,
+        "classification_AP": 0.9965370327006943,
+        "classification_F1": 0.9748743718592964
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9508514858089503,
+        "seg_AUROC": 0.9663919164294935,
+        "seg_F1": 0.44039186134137154,
+        "classification_AUROC": 0.9870000000000001,
+        "classification_AP": 0.9941137857530825,
+        "classification_F1": 0.9591836734693877
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9859575332285214,
+        "seg_AUROC": 0.9897650235022041,
+        "seg_F1": 0.5724038807042761,
+        "classification_AUROC": 0.9904000000000001,
+        "classification_AP": 0.995238148710397,
+        "classification_F1": 0.9696969696969697
+    },
+    "mean_au_pro": 0.9480533271936084,
+    "mean_segmentation_au_roc": 0.9713504509782616,
+    "mean_segmentation_f1": 0.5101749655463397,
+    "mean_classification_au_roc": 0.9783055555555555,
+    "mean_classification_ap": 0.9854442032384224,
+    "mean_classification_f1": 0.9554187232896195
+}

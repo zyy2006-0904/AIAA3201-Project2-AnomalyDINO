@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8759716734795872,
+        "seg_AUROC": 0.9526113743651401,
+        "seg_F1": 0.371859296482412,
+        "classification_AUROC": 0.9156000000000001,
+        "classification_AP": 0.921831411188966,
+        "classification_F1": 0.8599999999999999
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9152575122338019,
+        "seg_AUROC": 0.923161312240092,
+        "seg_F1": 0.4145970603142423,
+        "classification_AUROC": 0.9821666666666666,
+        "classification_AP": 0.9897146920087819,
+        "classification_F1": 0.9514563106796116
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9748058907746734,
+        "seg_AUROC": 0.9831532943026667,
+        "seg_F1": 0.48801447308909995,
+        "classification_AUROC": 0.9376,
+        "classification_AP": 0.9710733635676633,
+        "classification_F1": 0.922279792746114
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9546492435430262,
+        "seg_AUROC": 0.9935208895884768,
+        "seg_F1": 0.6186085498742666,
+        "classification_AUROC": 0.9908,
+        "classification_AP": 0.9957991696785382,
+        "classification_F1": 0.9658536585365853
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9454110100244744,
+        "seg_AUROC": 0.9592905190625243,
+        "seg_F1": 0.39698687582511455,
+        "classification_AUROC": 0.9738000000000001,
+        "classification_AP": 0.988214999700328,
+        "classification_F1": 0.9424083769633509
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9845238827124568,
+        "seg_AUROC": 0.9858167642841413,
+        "seg_F1": 0.4729138373321261,
+        "classification_AUROC": 0.9636,
+        "classification_AP": 0.9819675636847287,
+        "classification_F1": 0.927536231884058
+    },
+    "mean_au_pro": 0.94176986879467,
+    "mean_segmentation_au_roc": 0.9662590256405069,
+    "mean_segmentation_f1": 0.4604966821528769,
+    "mean_classification_au_roc": 0.9605944444444443,
+    "mean_classification_ap": 0.9747668666381676,
+    "mean_classification_f1": 0.9282557284682866
+}

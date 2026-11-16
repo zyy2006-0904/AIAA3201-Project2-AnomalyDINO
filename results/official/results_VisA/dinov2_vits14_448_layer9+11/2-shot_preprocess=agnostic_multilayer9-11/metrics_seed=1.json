@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.871109615083804,
+        "seg_AUROC": 0.9513328895673109,
+        "seg_F1": 0.3755458515283843,
+        "classification_AUROC": 0.9254,
+        "classification_AP": 0.9289130052145423,
+        "classification_F1": 0.8712871287128714
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9198219115713565,
+        "seg_AUROC": 0.9270985430284278,
+        "seg_F1": 0.43075183719615606,
+        "classification_AUROC": 0.9741666666666667,
+        "classification_AP": 0.9862449008930574,
+        "classification_F1": 0.9346733668341709
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9682232490080006,
+        "seg_AUROC": 0.9807762961607087,
+        "seg_F1": 0.48743117069667224,
+        "classification_AUROC": 0.9404,
+        "classification_AP": 0.9705207595525582,
+        "classification_F1": 0.9157894736842105
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.957002990955122,
+        "seg_AUROC": 0.9940330972441415,
+        "seg_F1": 0.6323824829248694,
+        "classification_AUROC": 0.9878,
+        "classification_AP": 0.9944973756324071,
+        "classification_F1": 0.9591836734693877
+    },
+    "fryum": {
+        "seg_AUPRO": 0.945307053400149,
+        "seg_AUROC": 0.9609386087569627,
+        "seg_F1": 0.4035012196871861,
+        "classification_AUROC": 0.9782,
+        "classification_AP": 0.9900403213644086,
+        "classification_F1": 0.9441624365482233
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9841058515238718,
+        "seg_AUROC": 0.9876862101740188,
+        "seg_F1": 0.5381443298969073,
+        "classification_AUROC": 0.9542,
+        "classification_AP": 0.9762140966816835,
+        "classification_F1": 0.9339622641509434
+    },
+    "mean_au_pro": 0.9409284452570507,
+    "mean_segmentation_au_roc": 0.9669776074885951,
+    "mean_segmentation_f1": 0.4779594819883625,
+    "mean_classification_au_roc": 0.9600277777777778,
+    "mean_classification_ap": 0.9744050765564429,
+    "mean_classification_f1": 0.9265097238999678
+}

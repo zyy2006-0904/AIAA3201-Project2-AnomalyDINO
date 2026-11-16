@@ -35,16 +35,38 @@ def pixel_metrics(
 ) -> dict[str, float]:
     if not maps:
         raise ValueError("No localization maps were provided")
-    predictions = np.concatenate(
-        [np.asarray(item, dtype=np.float32).ravel() for item in maps]
-    )
-    targets = np.concatenate(
-        [(np.asarray(item) > 0).astype(np.uint8).ravel() for item in masks]
-    )
-    if targets.min() == targets.max():
+    arrays = [np.asarray(item, dtype=np.float32) for item in maps]
+    targets = [np.asarray(item) > 0 for item in masks]
+    positive_count = sum(int(item.sum()) for item in targets)
+    total_count = sum(item.size for item in targets)
+    if positive_count == 0 or positive_count == total_count:
         raise ValueError("Pixel AUROC is undefined when all masks have one class")
+    minimum = min(float(item.min()) for item in arrays)
+    maximum = max(float(item.max()) for item in arrays)
+    if not np.isfinite([minimum, maximum]).all() or maximum <= minimum:
+        return {"pixel_auroc": 0.5}
+
+    bins = 65536
+    positives = np.zeros(bins, dtype=np.int64)
+    negatives = np.zeros(bins, dtype=np.int64)
+    scale = (bins - 1) / (maximum - minimum)
+    for prediction, target in zip(arrays, targets, strict=True):
+        quantized = np.rint((prediction - minimum) * scale).astype(np.int32)
+        positives += np.bincount(
+            quantized[target].ravel(),
+            minlength=bins,
+        )
+        negatives += np.bincount(
+            quantized[~target].ravel(),
+            minlength=bins,
+        )
+
+    negative_count = total_count - positive_count
+    lower_negatives = np.concatenate(([0], np.cumsum(negatives[:-1])))
+    rank_sum = np.sum(positives * (lower_negatives + 0.5 * negatives))
+    auroc = rank_sum / (positive_count * negative_count)
     return {
-        "pixel_auroc": float(roc_auc_score(targets, predictions)),
+        "pixel_auroc": float(auroc),
     }
 
 

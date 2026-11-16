@@ -1,0 +1,24 @@
+data_root: /data/disk1/home/yzhang201/aiaa3201_project2/data/VisA_pytorch/1cls
+dataset: VisA
+device: cuda:0
+eval_clf: true
+eval_segm: true
+faiss_on_cpu: true
+just_seed: 1
+k_neighbors: 1
+knn_metric: L2_normalized
+layer: null
+mask_ref_images: false
+model_name: dinov2_vits14
+num_seeds: 1
+num_threads: 2
+preprocess: agnostic
+resolution: 448
+save_examples: true
+shots:
+- 1
+- 2
+- 4
+- 8
+tag: baseline
+warmup_iters: 5

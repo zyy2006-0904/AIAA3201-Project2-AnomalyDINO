@@ -34,8 +34,8 @@ reproducible AnomalyDINO pipeline on the six categories specified by the course
 project, with calibration data excluded from every few-shot reference pool.
 Third, it implements a controlled multi-layer feature-fusion variant and
 evaluates it with identical data, references, preprocessing, input resolution,
-and seeds. We report image AUROC, image AP/F1, patch-level pixel AUROC/AP/F1,
-AUPRO, latency, and peak GPU memory.
+and seeds. We report image AUROC/AP/F1, 448-pixel localization AUROC, latency,
+and peak GPU memory.
 
 The full project also studies reliability. Rather than selecting a threshold
 from test labels, each category reserves the first 20 normal training images

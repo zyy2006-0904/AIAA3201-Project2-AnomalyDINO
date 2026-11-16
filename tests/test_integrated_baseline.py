@@ -5,8 +5,9 @@ import os
 import cv2
 import numpy as np
 
-from project_pipeline.baseline import TemplateBaseline
+from project_pipeline.baseline import TemplateBaseline, select_references
 from project_pipeline.metrics import image_metrics, mean_std, pixel_metrics
+from sklearn.metrics import roc_auc_score
 
 
 def test_global_template_selection_and_metrics(tmp_path):
@@ -41,6 +42,24 @@ def test_metrics_and_sample_std():
     mask[1:3, 1:3] = 1
     assert pixel_metrics([prediction], [mask])["pixel_auroc"] == 1.0
 
+    rng = np.random.default_rng(3)
+    predictions = [rng.random((24, 24), dtype=np.float32) for _ in range(5)]
+    masks = [rng.random((24, 24)) > 0.8 for _ in range(5)]
+    exact = roc_auc_score(
+        np.concatenate([mask.ravel() for mask in masks]),
+        np.concatenate([prediction.ravel() for prediction in predictions]),
+    )
+    quantized = pixel_metrics(predictions, masks)["pixel_auroc"]
+    assert abs(exact - quantized) < 0.001
+
     mean, std = mean_std([1.0, 2.0, 3.0])
     assert mean == 2.0
     assert np.isclose(std, 1.0)
+
+
+def test_reference_selection_excludes_calibration():
+    names = [f"{index:03d}.png" for index in range(40)]
+    calibration, references = select_references(names, shot=4, seed=2)
+    assert calibration == names[:20]
+    assert references == ["028.png", "029.png", "030.png", "031.png"]
+    assert not set(calibration) & set(references)

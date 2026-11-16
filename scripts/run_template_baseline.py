@@ -13,7 +13,13 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from project_pipeline.baseline import DEFAULT_CHANNELS, evaluate_class, list_images
+from project_pipeline.baseline import (
+    CALIBRATION_COUNT,
+    DEFAULT_CHANNELS,
+    evaluate_class,
+    list_images,
+    select_references,
+)
 
 
 CATEGORIES = (
@@ -24,7 +30,6 @@ CATEGORIES = (
     "fryum",
     "pipe_fryum",
 )
-CALIBRATION_COUNT = 20
 METRIC_KEYS = (
     "image_auroc",
     "image_ap",
@@ -98,9 +103,12 @@ def main() -> None:
                 training = list_images(train_folder)
                 if len(training) < CALIBRATION_COUNT + shot * (seed + 1):
                     raise ValueError(f"Not enough training images for {category}")
-                calibration = training[:CALIBRATION_COUNT]
-                pool = training[CALIBRATION_COUNT:]
-                references = pool[seed * shot : (seed + 1) * shot]
+                calibration, references = select_references(
+                    training,
+                    shot,
+                    seed,
+                    CALIBRATION_COUNT,
+                )
 
                 (run_dir / "references").mkdir(exist_ok=True)
                 (run_dir / "references" / f"{category}.json").write_text(

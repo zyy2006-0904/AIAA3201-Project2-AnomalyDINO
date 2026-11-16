@@ -1,0 +1,232 @@
+{
+  "method": "integrated_template_difference",
+  "shot": 1,
+  "seed": 0,
+  "resolution": 448,
+  "config": {
+    "channels": [
+      "rgb",
+      "gray",
+      "gradient",
+      "ssim"
+    ],
+    "template_mode": "global",
+    "score_mode": "percentile",
+    "score_percentile": 99.5,
+    "border_crop": 0,
+    "ecc": false
+  },
+  "mean_image_auroc": 0.5624166666666667,
+  "mean_image_ap": 0.6835930269816028,
+  "mean_image_f1": 0.7738902852996813,
+  "mean_pixel_auroc": 0.5734902223068727,
+  "mean_mean_inference_seconds": 0.1444365778620381,
+  "test_false_positive_rate": 0.17777777777777778,
+  "test_false_negative_rate": 0.8033333333333333,
+  "categories": {
+    "candle": {
+      "references": [
+        "0023.JPG"
+      ],
+      "calibration": [
+        "0000.JPG",
+        "0001.JPG",
+        "0002.JPG",
+        "0003.JPG",
+        "0004.JPG",
+        "0005.JPG",
+        "0006.JPG",
+        "0007.JPG",
+        "0008.JPG",
+        "0009.JPG",
+        "0010.JPG",
+        "0012.JPG",
+        "0014.JPG",
+        "0015.JPG",
+        "0017.JPG",
+        "0018.JPG",
+        "0019.JPG",
+        "0020.JPG",
+        "0021.JPG",
+        "0022.JPG"
+      ],
+      "threshold": 0.8717831462621689,
+      "image_auroc": 0.4554,
+      "image_ap": 0.45317693259766834,
+      "image_f1": 0.6711409395973155,
+      "pixel_auroc": 0.6610931341302582,
+      "mean_inference_seconds": 0.2302086699125357,
+      "num_test_images": 200
+    },
+    "capsules": {
+      "references": [
+        "023.JPG"
+      ],
+      "calibration": [
+        "000.JPG",
+        "001.JPG",
+        "002.JPG",
+        "003.JPG",
+        "004.JPG",
+        "005.JPG",
+        "006.JPG",
+        "007.JPG",
+        "008.JPG",
+        "009.JPG",
+        "010.JPG",
+        "012.JPG",
+        "014.JPG",
+        "015.JPG",
+        "017.JPG",
+        "018.JPG",
+        "019.JPG",
+        "020.JPG",
+        "021.JPG",
+        "022.JPG"
+      ],
+      "threshold": 1.0491526126861572,
+      "image_auroc": 0.5565,
+      "image_ap": 0.6686145086394081,
+      "image_f1": 0.7722007722007722,
+      "pixel_auroc": 0.5381568608546001,
+      "mean_inference_seconds": 0.17273392696515658,
+      "num_test_images": 160
+    },
+    "cashew": {
+      "references": [
+        "024.JPG"
+      ],
+      "calibration": [
+        "000.JPG",
+        "001.JPG",
+        "002.JPG",
+        "003.JPG",
+        "004.JPG",
+        "005.JPG",
+        "007.JPG",
+        "008.JPG",
+        "009.JPG",
+        "010.JPG",
+        "011.JPG",
+        "014.JPG",
+        "015.JPG",
+        "016.JPG",
+        "017.JPG",
+        "018.JPG",
+        "019.JPG",
+        "020.JPG",
+        "021.JPG",
+        "022.JPG"
+      ],
+      "threshold": 1.0418425917625427,
+      "image_auroc": 0.5936,
+      "image_ap": 0.7485382411618624,
+      "image_f1": 0.8,
+      "pixel_auroc": 0.4120923475783403,
+      "mean_inference_seconds": 0.12306872587961455,
+      "num_test_images": 150
+    },
+    "chewinggum": {
+      "references": [
+        "023.JPG"
+      ],
+      "calibration": [
+        "000.JPG",
+        "001.JPG",
+        "002.JPG",
+        "003.JPG",
+        "004.JPG",
+        "005.JPG",
+        "007.JPG",
+        "008.JPG",
+        "009.JPG",
+        "010.JPG",
+        "011.JPG",
+        "014.JPG",
+        "015.JPG",
+        "016.JPG",
+        "017.JPG",
+        "018.JPG",
+        "019.JPG",
+        "020.JPG",
+        "021.JPG",
+        "022.JPG"
+      ],
+      "threshold": 1.0351148128509522,
+      "image_auroc": 0.5686,
+      "image_ap": 0.7261356296424125,
+      "image_f1": 0.8,
+      "pixel_auroc": 0.20647604563506078,
+      "mean_inference_seconds": 0.1106370791234076,
+      "num_test_images": 150
+    },
+    "fryum": {
+      "references": [
+        "024.JPG"
+      ],
+      "calibration": [
+        "000.JPG",
+        "001.JPG",
+        "002.JPG",
+        "003.JPG",
+        "004.JPG",
+        "005.JPG",
+        "007.JPG",
+        "008.JPG",
+        "009.JPG",
+        "010.JPG",
+        "011.JPG",
+        "014.JPG",
+        "015.JPG",
+        "016.JPG",
+        "017.JPG",
+        "018.JPG",
+        "019.JPG",
+        "020.JPG",
+        "021.JPG",
+        "022.JPG"
+      ],
+      "threshold": 1.1407969772815705,
+      "image_auroc": 0.6597999999999999,
+      "image_ap": 0.8089629294875806,
+      "image_f1": 0.8,
+      "pixel_auroc": 0.8763059220804691,
+      "mean_inference_seconds": 0.11821566131897271,
+      "num_test_images": 150
+    },
+    "pipe_fryum": {
+      "references": [
+        "024.JPG"
+      ],
+      "calibration": [
+        "000.JPG",
+        "001.JPG",
+        "002.JPG",
+        "003.JPG",
+        "004.JPG",
+        "005.JPG",
+        "007.JPG",
+        "008.JPG",
+        "009.JPG",
+        "010.JPG",
+        "011.JPG",
+        "014.JPG",
+        "015.JPG",
+        "016.JPG",
+        "017.JPG",
+        "018.JPG",
+        "019.JPG",
+        "020.JPG",
+        "021.JPG",
+        "022.JPG"
+      ],
+      "threshold": 0.9584539592266083,
+      "image_auroc": 0.5406,
+      "image_ap": 0.6961299203606858,
+      "image_f1": 0.8,
+      "pixel_auroc": 0.746817023562508,
+      "mean_inference_seconds": 0.11175540397254129,
+      "num_test_images": 150
+    }
+  }
+}

@@ -71,8 +71,8 @@ def main() -> None:
         r"\centering",
         r"\small",
         r"\caption{Unweighted category mean and standard deviation over seeds.",
-        r"Image AUROC is shown in the upper block and patch-level pixel AUROC",
-        r"in the lower block.}",
+        r"Image AUROC is shown in the upper block and 448-pixel localization",
+        r"AUROC in the lower block.}",
         r"\label{tab:main}",
         r"\begin{tabular}{lcccc}",
         r"\toprule",
@@ -98,7 +98,7 @@ def main() -> None:
     lines.extend(
         [
             r"\midrule",
-            r"\multicolumn{5}{l}{\emph{Patch-level pixel AUROC (\%)}}\\",
+            r"\multicolumn{5}{l}{\emph{448-pixel localization AUROC (\%)}}\\",
         ]
     )
     for method in METHOD_NAMES:

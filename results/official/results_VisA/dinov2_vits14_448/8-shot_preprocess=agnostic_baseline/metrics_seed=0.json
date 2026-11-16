@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8857854571546679,
+        "seg_AUROC": 0.9562893906446043,
+        "seg_F1": 0.3711615487316422,
+        "classification_AUROC": 0.931,
+        "classification_AP": 0.9395641867922195,
+        "classification_F1": 0.8923076923076922
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9184056552751423,
+        "seg_AUROC": 0.9275792181969618,
+        "seg_F1": 0.4496684749849306,
+        "classification_AUROC": 0.9738333333333333,
+        "classification_AP": 0.9843625748430025,
+        "classification_F1": 0.9423076923076924
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9706433662012889,
+        "seg_AUROC": 0.9886789600066396,
+        "seg_F1": 0.5736363636363636,
+        "classification_AUROC": 0.9498,
+        "classification_AP": 0.9761836568759605,
+        "classification_F1": 0.9346733668341709
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9584645699553228,
+        "seg_AUROC": 0.9947133839107946,
+        "seg_F1": 0.6413822166034555,
+        "classification_AUROC": 0.9887999999999999,
+        "classification_AP": 0.9948936130109953,
+        "classification_F1": 0.97
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9447431509917265,
+        "seg_AUROC": 0.9652494636697521,
+        "seg_F1": 0.4415924139622333,
+        "classification_AUROC": 0.9692,
+        "classification_AP": 0.9866979590331579,
+        "classification_F1": 0.9435897435897437
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9838839164308263,
+        "seg_AUROC": 0.9901336688022295,
+        "seg_F1": 0.557171906773033,
+        "classification_AUROC": 0.9606,
+        "classification_AP": 0.9770150485559018,
+        "classification_F1": 0.9509803921568627
+    },
+    "mean_au_pro": 0.9436543526681623,
+    "mean_segmentation_au_roc": 0.9704406808718304,
+    "mean_segmentation_f1": 0.5057688207819431,
+    "mean_classification_au_roc": 0.9622055555555556,
+    "mean_classification_ap": 0.976452839851873,
+    "mean_classification_f1": 0.9389764811993603
+}

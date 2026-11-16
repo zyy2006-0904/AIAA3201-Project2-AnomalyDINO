@@ -14,13 +14,13 @@ from typing import Literal
 
 import cv2
 import numpy as np
-from skimage.metrics import structural_similarity
 
 from .metrics import image_metrics, pixel_metrics
 
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
 DEFAULT_CHANNELS = ("rgb", "gray", "gradient", "ssim")
+CALIBRATION_COUNT = 20
 
 
 def list_images(folder: str | os.PathLike[str]) -> list[str]:
@@ -29,6 +29,21 @@ def list_images(folder: str | os.PathLike[str]) -> list[str]:
         for name in os.listdir(folder)
         if os.path.splitext(name)[1].lower() in IMAGE_EXTENSIONS
     )
+
+
+def select_references(
+    training_names: list[str],
+    shot: int,
+    seed: int,
+    calibration_count: int = CALIBRATION_COUNT,
+) -> tuple[list[str], list[str]]:
+    ordered = sorted(training_names)
+    calibration = ordered[:calibration_count]
+    pool = ordered[calibration_count:]
+    references = pool[seed * shot : (seed + 1) * shot]
+    if len(references) != shot:
+        raise ValueError(f"Cannot select {shot} references for seed {seed}")
+    return calibration, references
 
 
 def load_rgb(path: str | os.PathLike[str], size: int) -> np.ndarray:
@@ -54,16 +69,35 @@ class PreparedImage:
     rgb: np.ndarray
     gray: np.ndarray
     gradient: np.ndarray
+    ssim_mean: np.ndarray
+    ssim_square_mean: np.ndarray
 
 
 def prepare_image(image: np.ndarray) -> PreparedImage:
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY).astype(np.float32)
     gx = cv2.Sobel(gray, cv2.CV_32F, 1, 0, ksize=3)
     gy = cv2.Sobel(gray, cv2.CV_32F, 0, 1, ksize=3)
+    rgb = image.astype(np.float32) / 255.0
+    ssim_mean = cv2.GaussianBlur(
+        rgb,
+        (0, 0),
+        sigmaX=1.5,
+        sigmaY=1.5,
+        borderType=cv2.BORDER_REFLECT,
+    ).mean(axis=2)
+    ssim_square_mean = cv2.GaussianBlur(
+        rgb * rgb,
+        (0, 0),
+        sigmaX=1.5,
+        sigmaY=1.5,
+        borderType=cv2.BORDER_REFLECT,
+    ).mean(axis=2)
     return PreparedImage(
-        rgb=image.astype(np.float32) / 255.0,
+        rgb=rgb,
         gray=gray / 255.0,
         gradient=cv2.magnitude(gx, gy),
+        ssim_mean=ssim_mean,
+        ssim_square_mean=ssim_square_mean,
     )
 
 
@@ -120,19 +154,7 @@ class TemplateBaseline:
             )
             maps.append(np.abs(image.gradient - reference.gradient) / scale)
         if "ssim" in self.channels:
-            _, similarity = structural_similarity(
-                (image.rgb * 255).astype(np.uint8),
-                (reference.rgb * 255).astype(np.uint8),
-                data_range=255,
-                channel_axis=2,
-                gaussian_weights=True,
-                sigma=1.5,
-                use_sample_covariance=False,
-                full=True,
-            )
-            if similarity.ndim == 3:
-                similarity = similarity.mean(axis=2)
-            maps.append(1.0 - similarity)
+            maps.append(_ssim_difference(image, reference))
         if not maps:
             raise ValueError("At least one difference channel is required")
         return np.max(np.stack(maps), axis=0).astype(np.float32)
@@ -160,6 +182,42 @@ class TemplateBaseline:
             count = max(1, int(len(values) * 0.01))
             score = float(np.partition(values, len(values) - count)[-count:].mean())
         return score, anomaly_map, selected
+
+
+def _ssim_difference(image: PreparedImage, reference: PreparedImage) -> np.ndarray:
+    """Fast Gaussian SSIM map with per-channel averaging.
+
+    The implementation uses OpenCV's C++ Gaussian filter rather than the
+    Python-level multichannel SSIM loop. It follows the standard SSIM constants
+    for data in [0, 1] and keeps the full spatial map used by the baseline.
+    """
+    c1 = 0.01**2
+    c2 = 0.03**2
+    cross_mean = cv2.GaussianBlur(
+        image.rgb * reference.rgb,
+        (0, 0),
+        sigmaX=1.5,
+        sigmaY=1.5,
+        borderType=cv2.BORDER_REFLECT,
+    ).mean(axis=2)
+    mu_image = image.ssim_mean
+    mu_reference = reference.ssim_mean
+    image_variance = np.maximum(
+        image.ssim_square_mean - mu_image * mu_image,
+        0.0,
+    )
+    reference_variance = np.maximum(
+        reference.ssim_square_mean - mu_reference * mu_reference,
+        0.0,
+    )
+    covariance = cross_mean - mu_image * mu_reference
+    numerator = (2 * mu_image * mu_reference + c1) * (2 * covariance + c2)
+    denominator = (
+        (mu_image * mu_image + mu_reference * mu_reference + c1)
+        * (image_variance + reference_variance + c2)
+    )
+    similarity = np.clip(numerator / denominator, -1.0, 1.0)
+    return (1.0 - similarity).astype(np.float32)
 
 
 def _align_rgb(reference: np.ndarray, image: np.ndarray, max_iter: int) -> np.ndarray:

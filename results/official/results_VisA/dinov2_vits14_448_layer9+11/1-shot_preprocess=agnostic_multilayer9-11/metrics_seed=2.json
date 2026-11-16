@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8627385446226753,
+        "seg_AUROC": 0.9504213841101413,
+        "seg_F1": 0.36635006784260515,
+        "classification_AUROC": 0.9291,
+        "classification_AP": 0.9370561089636591,
+        "classification_F1": 0.8704663212435233
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9142448745838857,
+        "seg_AUROC": 0.9230860459612693,
+        "seg_F1": 0.4336384439359268,
+        "classification_AUROC": 0.9651666666666667,
+        "classification_AP": 0.9813799078171507,
+        "classification_F1": 0.9186602870813397
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9667771994429046,
+        "seg_AUROC": 0.9771461689532024,
+        "seg_F1": 0.44469424460431656,
+        "classification_AUROC": 0.9344,
+        "classification_AP": 0.9670182523888783,
+        "classification_F1": 0.9333333333333333
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9564917325479402,
+        "seg_AUROC": 0.9936049100645173,
+        "seg_F1": 0.6269261962692619,
+        "classification_AUROC": 0.9843999999999999,
+        "classification_AP": 0.9934503378182497,
+        "classification_F1": 0.9696969696969697
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9398050252452854,
+        "seg_AUROC": 0.9570374258930657,
+        "seg_F1": 0.38197978153198997,
+        "classification_AUROC": 0.9805999999999999,
+        "classification_AP": 0.990968707577778,
+        "classification_F1": 0.9435897435897437
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.982336213414321,
+        "seg_AUROC": 0.987350924371489,
+        "seg_F1": 0.5341005246234557,
+        "classification_AUROC": 0.9503999999999999,
+        "classification_AP": 0.9745683640061338,
+        "classification_F1": 0.9320388349514563
+    },
+    "mean_au_pro": 0.9370655983095021,
+    "mean_segmentation_au_roc": 0.9647744765589475,
+    "mean_segmentation_f1": 0.46461487646792604,
+    "mean_classification_au_roc": 0.9573444444444444,
+    "mean_classification_ap": 0.9740736130953082,
+    "mean_classification_f1": 0.927964248316061
+}

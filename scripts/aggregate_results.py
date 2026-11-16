@@ -168,6 +168,11 @@ def main() -> None:
                     source_name = loaded[0]["category_metric_names"][metric]
                     if source_name is None:
                         continue
+                    if any(
+                        source_name not in payload["categories"][category]
+                        for payload in loaded.values()
+                    ):
+                        continue
                     values = [
                         payload["categories"][category][source_name]
                         for payload in loaded.values()

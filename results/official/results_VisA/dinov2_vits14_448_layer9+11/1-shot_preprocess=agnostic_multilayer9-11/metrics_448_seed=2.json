@@ -1,0 +1,43 @@
+{
+  "eval_size": 448,
+  "mean_classification_au_roc": 0.9573444444444444,
+  "mean_classification_ap": 0.9740771667555782,
+  "mean_classification_f1": 0.927964248316061,
+  "mean_segmentation_au_roc": 0.980678962722941,
+  "candle": {
+    "classification_AUROC": 0.9291,
+    "classification_AP": 0.9370774309252797,
+    "classification_F1": 0.8704663212435233,
+    "seg_AUROC": 0.9847731665161666
+  },
+  "capsules": {
+    "classification_AUROC": 0.9651666666666667,
+    "classification_AP": 0.9813799078171508,
+    "classification_F1": 0.9186602870813397,
+    "seg_AUROC": 0.956594629376995
+  },
+  "cashew": {
+    "classification_AUROC": 0.9344,
+    "classification_AP": 0.9670182523888783,
+    "classification_F1": 0.9333333333333333,
+    "seg_AUROC": 0.9870989948067499
+  },
+  "chewinggum": {
+    "classification_AUROC": 0.9843999999999999,
+    "classification_AP": 0.9934503378182497,
+    "classification_F1": 0.9696969696969697,
+    "seg_AUROC": 0.9955206635548468
+  },
+  "fryum": {
+    "classification_AUROC": 0.9805999999999999,
+    "classification_AP": 0.990968707577778,
+    "classification_F1": 0.9435897435897437,
+    "seg_AUROC": 0.9683511129689146
+  },
+  "pipe_fryum": {
+    "classification_AUROC": 0.9503999999999999,
+    "classification_AP": 0.9745683640061338,
+    "classification_F1": 0.9320388349514563,
+    "seg_AUROC": 0.9917352091139722
+  }
+}

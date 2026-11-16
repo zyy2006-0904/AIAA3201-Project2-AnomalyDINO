@@ -2,7 +2,8 @@
 Industrial visual inspection must recognize rare defects even when only a
 handful of defect-free examples are available. This project studies few-shot
 anomaly detection on six VisA categories. We first build a template-difference
-baseline that compares each product image with its closest normal reference.
+baseline that compares each product image with its closest normal reference
+using RGB, grayscale, gradient, and Gaussian SSIM difference maps.
 We then reproduce AnomalyDINO with a frozen DINOv2 ViT-S/14 backbone at
 $448\times448$ resolution and agnostic preprocessing. A transparent
 multi-layer improvement fuses normalized patch features from transformer blocks

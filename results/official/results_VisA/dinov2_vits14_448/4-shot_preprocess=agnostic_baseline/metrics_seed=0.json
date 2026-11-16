@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8867347017908208,
+        "seg_AUROC": 0.9551717527153685,
+        "seg_F1": 0.37483953786906293,
+        "classification_AUROC": 0.9164,
+        "classification_AP": 0.9287353393342863,
+        "classification_F1": 0.8695652173913043
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9103738985963676,
+        "seg_AUROC": 0.9234512418633929,
+        "seg_F1": 0.4456140350877193,
+        "classification_AUROC": 0.9781666666666666,
+        "classification_AP": 0.9873627254631006,
+        "classification_F1": 0.9365853658536586
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9650947616179686,
+        "seg_AUROC": 0.9862468884535887,
+        "seg_F1": 0.5332160140783107,
+        "classification_AUROC": 0.9486,
+        "classification_AP": 0.9750676710457351,
+        "classification_F1": 0.9170731707317075
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9580954925464658,
+        "seg_AUROC": 0.9946193811269269,
+        "seg_F1": 0.6402493321460373,
+        "classification_AUROC": 0.9884,
+        "classification_AP": 0.9947319621519729,
+        "classification_F1": 0.9655172413793104
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9414873374578947,
+        "seg_AUROC": 0.9633593809503729,
+        "seg_F1": 0.43275298411008895,
+        "classification_AUROC": 0.97,
+        "classification_AP": 0.9870586477406439,
+        "classification_F1": 0.9435897435897437
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9841363585639753,
+        "seg_AUROC": 0.989478283358891,
+        "seg_F1": 0.5470588235294118,
+        "classification_AUROC": 0.9486,
+        "classification_AP": 0.9711894177583037,
+        "classification_F1": 0.9333333333333333
+    },
+    "mean_au_pro": 0.9409870917622488,
+    "mean_segmentation_au_roc": 0.9687211547447568,
+    "mean_segmentation_f1": 0.4956217878034385,
+    "mean_classification_au_roc": 0.958361111111111,
+    "mean_classification_ap": 0.9740242939156737,
+    "mean_classification_f1": 0.9276106787131764
+}

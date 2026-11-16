@@ -42,13 +42,13 @@ one, matching the official implementation, and report whether feature
 extraction is included in timing.
 
 The prediction outputs are evaluated per category and then averaged with equal
-category weight. Image AUROC is the main metric. Pixel AUROC and AUPRO use all
-test images, including normal images with zero masks. Because full-resolution
-TIFF storage exceeded the safe free-space budget on the shared server, official
-AnomalyDINO maps are evaluated at their native $32\times32$ patch grid and masks
-are downsampled with nearest-neighbor interpolation. This is the prediction
-resolution actually produced by the model and is identical across the official
-and improved variants.
+category weight. Image AUROC is the main metric. Pixel AUROC uses all test
+images, including normal images with zero masks. Because full-resolution
+TIFF storage exceeded the safe free-space budget, template and AnomalyDINO maps
+are evaluated on a common $448\times448$ grid. Pixel AUROC uses a monotonic
+16-bit rank histogram; on controlled arrays its difference from exact sklearn
+AUROC is below $10^{-3}$. This improves localization fidelity over the earlier
+native patch-grid calculation while keeping the full matrix tractable.
 
 \subsection{Efficiency Protocol}
 Peak GPU memory is measured after resetting CUDA statistics and loading the

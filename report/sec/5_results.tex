@@ -1,14 +1,29 @@
 \section{Results}
 
 \subsection{Quantitative Comparison}
+\input{tables/integration}
+
+Table~\ref{tab:integration} isolates the engineering integration. Multi-channel
+differences raise image AUROC by 3.7-4.9 points at every shot count. The
+localization increase is larger, but part of it comes from replacing the old
+32-pixel patch-grid evaluation with a 448-pixel common grid, so the method and
+measurement contributions are not conflated.
+
+At the mandated calibration threshold, the integration lowers test false
+positive rate from 32.9-35.1\% to 7.9-10.6\%, but raises false negative rate
+from 64.8-70.1\% to 80.3-85.1\%. The integrated baseline is therefore more
+conservative: it sharply reduces normal-sample false alarms while missing more
+defects. This trade-off is preferable for costly false alarms but is not a
+universally better operating point.
+
 \input{tables/main_metrics}
 
 \input{tables/category_metrics}
 
 Figure~\ref{fig:curves} shows the shot scaling. We report mean and standard
-deviation over seeds. The template baseline is highly sensitive to appearance
-variation and receives little benefit from additional references because all
-references are treated as raw pixels. AnomalyDINO benefits more consistently
+deviation over seeds. The integrated template baseline improves substantially
+over the original RGB-only version, but it remains sensitive to pose,
+illumination, and background variation. AnomalyDINO benefits more consistently
 from additional normal views because rotation augmentation and patch-level
 matching approximate the local normal manifold.
 
@@ -16,19 +31,19 @@ matching approximate the local normal manifold.
 \centering
 \includegraphics[width=\linewidth]{figures/image_auroc_vs_shots.png}\\
 \includegraphics[width=\linewidth]{figures/pixel_auroc_vs_shots.png}
-\caption{Image-level AUROC and patch-level pixel AUROC across shot counts.
+\caption{Image-level AUROC and 448-pixel localization AUROC across shot counts.
 Error bars show one standard deviation over three seeds.}
 \label{fig:curves}
 \end{figure}
 
 \subsection{Effect of Multi-Layer Fusion}
 The improvement is intentionally conservative. It changes only how patch
-features are formed, allowing any change in AUROC, AP, or localization to be
-attributed to the use of blocks 9 and 11. We report both positive and negative
-effects. If image AUROC changes little while localization improves, this
-indicates that earlier spatial detail mainly sharpens the anomaly map; if the
-opposite occurs, the added layer introduces background texture that competes
-with semantic evidence.
+features are formed, allowing changes in AUROC, AP, and localization to be
+attributed to the use of blocks 9 and 11. The fused method improves image
+AUROC by roughly 0.4 points at every shot count. On the common 448-pixel
+localization grid, pixel AUROC decreases slightly, by 0.02-0.06 points. This
+is reported as a small detection/localization trade-off rather than claiming
+that the improvement dominates every metric.
 
 \subsection{Per-Category Behavior}
 Large object categories such as candle provide many possible normal poses and

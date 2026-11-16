@@ -229,7 +229,7 @@ def main() -> None:
         topMargin=top,
         bottomMargin=bottom,
         title="Few-Shot Industrial Visual Anomaly Detection with DINOv2 Patch Retrieval",
-        author="Yiyang Zhang",
+        author="Yifei Zhang and Yiyang Zhang",
     )
     first_frame = Frame(
         left,
@@ -294,7 +294,7 @@ def main() -> None:
             title,
         )
     )
-    story.append(Paragraph("Yiyang Zhang", subtitle))
+    story.append(Paragraph("Yifei Zhang &nbsp;&nbsp; | &nbsp;&nbsp; Yiyang Zhang", subtitle))
     story.append(Spacer(1, 0.18 * inch))
     story.append(Paragraph("<b>Abstract</b>", subsection))
     story.append(
@@ -302,7 +302,7 @@ def main() -> None:
             "Industrial inspection must recognize rare defects when only a handful "
             "of defect-free examples are available. This project studies six VisA "
             "categories under the official 1-class protocol. We implement a "
-            "template-difference baseline, reproduce AnomalyDINO with frozen "
+            "multi-channel template-difference baseline, reproduce AnomalyDINO with frozen "
             "DINOv2 ViT-S/14 features at 448 x 448 resolution, and introduce a "
             "controlled improvement that fuses normalized patch features from "
             "transformer blocks 9 and 11. All methods use identical references, "
@@ -312,10 +312,10 @@ def main() -> None:
     )
     story.append(
         Paragraph(
-            "Across 1/2/4/8-shot settings and seeds 0/1/2, raw template differences "
-            "remain near chance (51.5-56.3% image AUROC), whereas AnomalyDINO reaches "
-            "94.6-96.6%. Multi-layer fusion consistently improves image AUROC by "
-            "0.3-0.4 points while preserving localization AUROC. The report also "
+            "Across 1/2/4/8-shot settings and seeds 0/1/2, the integrated template "
+            "baseline reaches 56.4-60.7% image AUROC, whereas AnomalyDINO reaches "
+            "94.6-96.6%. Multi-layer fusion improves image AUROC by about 0.4 points "
+            "with a small localization trade-off. The report also "
             "documents difficult examples, reference-selection leakage controls, "
             "runtime, and GPU memory. Code, results, and a runnable demo are included "
             "in the public repository.",
@@ -446,12 +446,12 @@ def main() -> None:
     story.append(
         Paragraph(
             "All images are resized to 448 x 448. For test image I and reference "
-            "R<sub>j</sub>, we compute the mean absolute RGB difference map "
-            "D<sub>j</sub>(u,v). The closest template is the reference with minimum "
-            "mean D<sub>j</sub>. The selected map is Gaussian-smoothed (sigma=4), and "
-            "the mean of its top 1% pixels is the anomaly score. This baseline favors "
-            "obvious scratches or missing material but confuses pose, illumination, "
-            "and background changes.",
+            "R<sub>j</sub>, we build RGB, grayscale, gradient, and 1-SSIM difference "
+            "maps and take their pixel-wise maximum. The compliant global mode "
+            "chooses the one reference with minimum mean combined difference. A "
+            "per-pixel multi-template mode is retained only as an ablation. The "
+            "selected map is Gaussian-smoothed, morphologically cleaned, and "
+            "summarized by its 99.5th percentile.",
             body,
         )
     )
@@ -534,11 +534,10 @@ def main() -> None:
     story.append(
         Paragraph(
             "Image AUROC is the main metric. Pixel localization is evaluated over all "
-            "test images, including normal images with all-zero masks. AnomalyDINO "
-            "produces a native 32 x 32 patch grid; masks are downsampled to that grid "
-            "before pixel AUROC, AP, F1, and AUPRO. This evaluates the model's actual "
-            "prediction resolution and avoids writing multiple gigabytes of full-"
-            "resolution TIFFs on the constrained shared server.",
+            "test images, including normal images with all-zero masks. Template and "
+            "AnomalyDINO maps are evaluated on a common 448 x 448 grid. Pixel AUROC "
+            "uses a monotonic 16-bit rank histogram; its error relative to exact "
+            "sklearn AUROC is below 0.001 on controlled arrays.",
             body,
         )
     )
@@ -547,6 +546,56 @@ def main() -> None:
         ["Method", "1-shot", "2-shot", "4-shot", "8-shot"],
         ["Image-level AUROC (%)", "", "", "", ""],
     ]
+    integration_path = project / "results/integration_comparison.csv"
+    integration_rows = [["Shot", "Old image", "New image", "Old loc.", "New loc."]]
+    with integration_path.open(newline="", encoding="utf-8") as stream:
+        for row in csv.DictReader(stream):
+            integration_rows.append(
+                [
+                    row["shot"],
+                    f"{100*float(row['old_image_auroc']):.2f}",
+                    f"{100*float(row['new_image_auroc']):.2f}",
+                    f"{100*float(row['old_pixel_auroc']):.2f}",
+                    f"{100*float(row['new_pixel_auroc']):.2f}",
+                ]
+            )
+    integration_table = fit_table(
+        integration_rows,
+        [0.55 * inch, 0.83 * inch, 0.83 * inch, 0.75 * inch, 0.75 * inch],
+        font_size=6.8,
+    )
+    story.append(
+        KeepTogether(
+            [
+                Paragraph(
+                    "<b>Table 2.</b> Original versus integrated Part 1. Image "
+                    "AUROC is directly comparable; localization also changes "
+                    "from the old patch grid to a 448-pixel grid.",
+                    caption,
+                ),
+                integration_table,
+                Spacer(1, 5),
+            ]
+        )
+    )
+    story.append(
+        Paragraph(
+            "The integration raises Part 1 image AUROC by 3.70-4.91 points. "
+            "Localization also rises, but that number combines the stronger "
+            "features with a more informative evaluation grid and is not treated "
+            "as a purely architectural gain.",
+            body,
+        )
+    )
+    story.append(
+        Paragraph(
+            "At the fixed 95th-percentile calibration threshold, false-positive "
+            "rate falls from 32.9-35.1% to 7.9-10.6%, while false-negative rate "
+            "rises from 64.8-70.1% to 80.3-85.1%. The integrated baseline is "
+            "substantially more conservative and trades recall for fewer false alarms.",
+            body,
+        )
+    )
     for method in METHOD_ORDER:
         row = [METHOD_NAMES[method]]
         for shot in SHOTS:
@@ -558,7 +607,7 @@ def main() -> None:
             )
             row.append(f"{100*mean:.1f} +/- {100*std:.1f}")
         main_rows.append(row)
-    main_rows.append(["Patch-level pixel AUROC (%)", "", "", "", ""])
+    main_rows.append(["448-pixel localization AUROC (%)", "", "", "", ""])
     for method in METHOD_ORDER:
         row = [METHOD_NAMES[method]]
         for shot in SHOTS:
@@ -585,7 +634,7 @@ def main() -> None:
         KeepTogether(
             [
                 Paragraph(
-                    "<b>Table 2.</b> AUROC mean and standard deviation over seeds.",
+                    "<b>Table 3.</b> AUROC mean and standard deviation over seeds.",
                     caption,
                 ),
                 main_table,
@@ -597,23 +646,22 @@ def main() -> None:
     story.append(Paragraph("5. Results and Discussion", section))
     story.append(
         Paragraph(
-            "The template baseline is near chance and even falls below chance for "
-            "pixel AUROC. Its worst category is fryum (17.4% image AUROC), where "
-            "legitimate shape and appearance variation dominates raw pixel "
-            "differences. AnomalyDINO improves image AUROC by roughly 40-43 points and "
-            "pixel AUROC by roughly 53-55 points, demonstrating the value of frozen "
-            "patch semantics and normal-neighbor retrieval.",
+            "The integrated template baseline remains well below AnomalyDINO but "
+            "improves substantially over the original RGB-only version. Its remaining "
+            "errors are dominated by pose, illumination, and background variation. "
+            "AnomalyDINO improves image AUROC by roughly 34-41 points and localization "
+            "AUROC by roughly 41 points, demonstrating the value of frozen patch "
+            "semantics and normal-neighbor retrieval.",
             body,
         )
     )
     story.append(
         Paragraph(
-            "The improvement is small but consistent on detection: +0.38, +0.42, "
-            "+0.41, and +0.42 points at 1, 2, 4, and 8 shots. Pixel AUROC remains "
-            "essentially unchanged at four decimals. This supports the interpretation "
-            "that earlier-layer texture evidence sharpens the separation between "
-            "global normal/abnormal samples, while PCA masking and the final-layer "
-            "branch already dominate localization.",
+            "The improvement is small but consistent on detection: about +0.4 points "
+            "at every shot count. On the stricter 448-pixel localization grid it is "
+            "slightly lower by 0.02-0.06 points, revealing an interpretable "
+            "detection/localization trade-off rather than an automatic improvement in "
+            "every metric.",
             body,
         )
     )
@@ -653,7 +701,7 @@ def main() -> None:
         KeepTogether(
             [
                 Paragraph(
-                    "<b>Table 3.</b> Per-category image AUROC (%) at 4-shot.",
+                    "<b>Table 4.</b> Per-category image AUROC (%) at 4-shot.",
                     caption,
                 ),
                 category_table,
@@ -687,7 +735,7 @@ def main() -> None:
             [
                 pixel_curves,
                 Paragraph(
-                    "<b>Figure 3.</b> Patch-level pixel AUROC versus shot count.",
+                    "<b>Figure 3.</b> 448-pixel localization AUROC versus shot count.",
                     caption,
                 ),
             ]
@@ -722,35 +770,33 @@ def main() -> None:
     )
 
     metric_rows = [
-        ["Method / shot", "Image AP", "Image F1", "Pixel AP", "AUPRO"],
+        ["Method / shot", "Image AP", "Image F1", "448 loc. AUROC"],
     ]
     for method in ("anomalydino", "multilayer"):
         for shot in (4, 8):
             ap, _ = lookup(summary, method, shot, "mean_classification_ap")
             f1, _ = lookup(summary, method, shot, "mean_classification_f1")
-            pixel_ap, _ = lookup(
+            pixel_auroc, _ = lookup(
                 summary, method, shot, "mean_segmentation_au_roc"
             )
-            aupro, _ = lookup(summary, method, shot, "mean_au_pro")
             metric_rows.append(
                 [
                     f"{METHOD_NAMES[method].replace('AnomalyDINO','AD')} {shot}",
                     f"{100*ap:.1f}",
                     f"{100*f1:.1f}",
-                    f"{100*pixel_ap:.1f}",
-                    f"{100*aupro:.1f}",
+                    f"{100*pixel_auroc:.1f}",
                 ]
             )
     metric_table = fit_table(
         metric_rows,
-        [1.15 * inch, 0.56 * inch, 0.56 * inch, 0.58 * inch, 0.56 * inch],
+        [1.25 * inch, 0.61 * inch, 0.61 * inch, 0.78 * inch],
         font_size=6.7,
     )
     story.append(
         KeepTogether(
             [
                 Paragraph(
-                    "<b>Table 4.</b> Additional metrics at 4- and 8-shot (%).",
+                    "<b>Table 5.</b> Additional metrics at 4- and 8-shot (%).",
                     caption,
                 ),
                 metric_table,
@@ -810,7 +856,7 @@ def main() -> None:
         KeepTogether(
             [
                 Paragraph(
-                    "<b>Table 5.</b> Exact difficult cases selected in Figure 5.",
+                    "<b>Table 6.</b> Exact difficult cases selected in Figure 5.",
                     caption,
                 ),
                 failure_table,
@@ -834,7 +880,7 @@ def main() -> None:
     )
     story.append(
         Paragraph(
-            "<b>Table 6.</b> Efficiency on an RTX A6000. Forward timing uses 50 "
+            "<b>Table 7.</b> Efficiency on an RTX A6000. Forward timing uses 50 "
             "synchronized passes. Pipeline timing includes loading, masks, and CPU "
             "FAISS; it is reported as a median because the server was shared.",
             caption,
@@ -852,8 +898,9 @@ def main() -> None:
     story.append(Paragraph("6. Limitations and Conclusion", section))
     story.append(
         Paragraph(
-            "The study evaluates the six required categories, not all twelve. Pixel "
-            "metrics use the native patch grid rather than full-resolution TIFF maps. "
+            "The study evaluates the six required categories, not all twelve. Localization "
+            "is scored on a 448 x 448 grid with a 16-bit monotonic rank histogram, "
+            "rather than original-resolution floating-point maps. "
             "The official one-image-at-a-time loop leaves GPU capacity unused during "
             "I/O and PCA. Finally, only one fixed layer pair is tested; other layer "
             "pairs or calibration-only learned weights may be stronger.",

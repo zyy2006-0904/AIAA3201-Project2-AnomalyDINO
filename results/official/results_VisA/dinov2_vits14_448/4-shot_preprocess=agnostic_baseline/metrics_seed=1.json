@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8810172483644343,
+        "seg_AUROC": 0.9554131762627069,
+        "seg_F1": 0.3667017913593256,
+        "classification_AUROC": 0.9366000000000001,
+        "classification_AP": 0.94340770979604,
+        "classification_F1": 0.8955223880597015
+    },
+    "capsules": {
+        "seg_AUPRO": 0.915609907921013,
+        "seg_AUROC": 0.924736520276223,
+        "seg_F1": 0.4169184290030212,
+        "classification_AUROC": 0.9744999999999999,
+        "classification_AP": 0.9851330691044264,
+        "classification_F1": 0.9252336448598131
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9753755342772726,
+        "seg_AUROC": 0.9887247512303711,
+        "seg_F1": 0.5485714285714285,
+        "classification_AUROC": 0.9250000000000002,
+        "classification_AP": 0.9651236773251417,
+        "classification_F1": 0.91
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9549307411200916,
+        "seg_AUROC": 0.9942156576695625,
+        "seg_F1": 0.6312264545835077,
+        "classification_AUROC": 0.9882,
+        "classification_AP": 0.9946309927663306,
+        "classification_F1": 0.97
+    },
+    "fryum": {
+        "seg_AUPRO": 0.940943548359617,
+        "seg_AUROC": 0.9599155292684292,
+        "seg_F1": 0.41123202191614033,
+        "classification_AUROC": 0.9668,
+        "classification_AP": 0.9853874437668171,
+        "classification_F1": 0.9435897435897437
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9837982700894965,
+        "seg_AUROC": 0.9890255034038494,
+        "seg_F1": 0.5277598450613299,
+        "classification_AUROC": 0.9630000000000001,
+        "classification_AP": 0.9808138441179036,
+        "classification_F1": 0.937799043062201
+    },
+    "mean_au_pro": 0.9419458750219875,
+    "mean_segmentation_au_roc": 0.968671856351857,
+    "mean_segmentation_f1": 0.48373499508245893,
+    "mean_classification_au_roc": 0.9590166666666667,
+    "mean_classification_ap": 0.9757494561461101,
+    "mean_classification_f1": 0.9303574699285765
+}

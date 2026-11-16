@@ -1,61 +1,61 @@
 method,method_label,shot,metric,mean,std,seed_count
-template,Template difference,1,mean_classification_au_roc,0.51455,0.010321518036020685,3
-template,Template difference,1,mean_classification_ap,0.6491836297817729,0.015669367741156,3
-template,Template difference,1,mean_classification_f1,0.7860182830748697,0.004617350674067263,3
-template,Template difference,1,mean_segmentation_au_roc,0.4298719925342596,0.02263636349537488,3
+template,Template difference,1,mean_classification_au_roc,0.5636944444444444,0.01060787617937898,3
+template,Template difference,1,mean_classification_ap,0.6968741846146446,0.017852330536106433,3
+template,Template difference,1,mean_classification_f1,0.77665537953651,0.0025828155328984992,3
+template,Template difference,1,mean_segmentation_au_roc,0.5689376638416048,0.0051047452576627695,3
 template,Template difference,1,mean_au_pro,,0.0,0
-template,Template difference,2,mean_classification_au_roc,0.5279314814814814,0.027512280834344153,3
-template,Template difference,2,mean_classification_ap,0.6640113373223961,0.019631476950018364,3
-template,Template difference,2,mean_classification_f1,0.7863608373915478,0.0040403520945272225,3
-template,Template difference,2,mean_segmentation_au_roc,0.42512325955959307,0.038060433684927515,3
+template,Template difference,2,mean_classification_au_roc,0.5758981481481481,0.010201575364505947,3
+template,Template difference,2,mean_classification_ap,0.7155508651836314,0.006698738637687754,3
+template,Template difference,2,mean_classification_f1,0.779873050237449,0.00559090821420262,3
+template,Template difference,2,mean_segmentation_au_roc,0.5707910024629482,0.008033962972800552,3
 template,Template difference,2,mean_au_pro,,0.0,0
-template,Template difference,4,mean_classification_au_roc,0.5452444444444445,0.03739669268072767,3
-template,Template difference,4,mean_classification_ap,0.670506136931765,0.025755575319178887,3
-template,Template difference,4,mean_classification_f1,0.79240026579652,0.005857435170468421,3
-template,Template difference,4,mean_segmentation_au_roc,0.4163128863367805,0.033558836014874256,3
+template,Template difference,4,mean_classification_au_roc,0.5822444444444445,0.033885556757859564,3
+template,Template difference,4,mean_classification_ap,0.7057964303520157,0.018836589840012626,3
+template,Template difference,4,mean_classification_f1,0.7815296859021809,0.005341900717871216,3
+template,Template difference,4,mean_segmentation_au_roc,0.5781722427150895,0.014473753801064566,3
 template,Template difference,4,mean_au_pro,,0.0,0
-template,Template difference,8,mean_classification_au_roc,0.5626518518518518,0.016075712388774095,3
-template,Template difference,8,mean_classification_ap,0.6796285857392926,0.013524139100167127,3
-template,Template difference,8,mean_classification_f1,0.798577083653409,0.00294255312471962,3
-template,Template difference,8,mean_segmentation_au_roc,0.4157837589111408,0.01310179356178421,3
+template,Template difference,8,mean_classification_au_roc,0.6071407407407409,0.03870845695604123,3
+template,Template difference,8,mean_classification_ap,0.7224326076569811,0.024928313343861003,3
+template,Template difference,8,mean_classification_f1,0.7885219423101542,0.010437165950074023,3
+template,Template difference,8,mean_segmentation_au_roc,0.5789079722184274,0.00534212655699882,3
 template,Template difference,8,mean_au_pro,,0.0,0
 multilayer,Multi-layer AnomalyDINO,1,mean_classification_au_roc,0.9498611111111112,0.007151981077528972,3
-multilayer,Multi-layer AnomalyDINO,1,mean_classification_ap,0.9693246993373145,0.004397506311304713,3
+multilayer,Multi-layer AnomalyDINO,1,mean_classification_ap,0.9693263287419033,0.004399301072647053,3
 multilayer,Multi-layer AnomalyDINO,1,mean_classification_f1,0.9210553713765143,0.006674963914484867,3
-multilayer,Multi-layer AnomalyDINO,1,mean_segmentation_au_roc,0.9641177895384807,0.0007298752413155925,3
-multilayer,Multi-layer AnomalyDINO,1,mean_au_pro,0.9359585182891297,0.0009825645250993193,3
+multilayer,Multi-layer AnomalyDINO,1,mean_segmentation_au_roc,0.9802105015746112,0.0004968830100603623,3
+multilayer,Multi-layer AnomalyDINO,1,mean_au_pro,,0.0,0
 multilayer,Multi-layer AnomalyDINO,2,mean_classification_au_roc,0.9574814814814815,0.004909245288271009,3
-multilayer,Multi-layer AnomalyDINO,2,mean_classification_ap,0.9734216520455788,0.0020247575339794478,3
+multilayer,Multi-layer AnomalyDINO,2,mean_classification_ap,0.9734186194258712,0.0020306204746905476,3
 multilayer,Multi-layer AnomalyDINO,2,mean_classification_f1,0.9260012438160562,0.002547079423186586,3
-multilayer,Multi-layer AnomalyDINO,2,mean_segmentation_au_roc,0.9664654436800135,0.00044631863570868856,3
-multilayer,Multi-layer AnomalyDINO,2,mean_au_pro,0.940471879201008,0.001576657076966085,3
-multilayer,Multi-layer AnomalyDINO,4,mean_classification_au_roc,0.9655777777777779,0.005575511381074736,3
-multilayer,Multi-layer AnomalyDINO,4,mean_classification_ap,0.9783991945071476,0.0032817445270620044,3
+multilayer,Multi-layer AnomalyDINO,2,mean_segmentation_au_roc,0.9817528048344116,0.00047861902420695627,3
+multilayer,Multi-layer AnomalyDINO,2,mean_au_pro,,0.0,0
+multilayer,Multi-layer AnomalyDINO,4,mean_classification_au_roc,0.9655888888888889,0.005581420346687646,3
+multilayer,Multi-layer AnomalyDINO,4,mean_classification_ap,0.9783998499339274,0.003282877868105216,3
 multilayer,Multi-layer AnomalyDINO,4,mean_classification_f1,0.9389269877869846,0.0118080326317923,3
-multilayer,Multi-layer AnomalyDINO,4,mean_segmentation_au_roc,0.9689298023389638,0.0004647282458476031,3
-multilayer,Multi-layer AnomalyDINO,4,mean_au_pro,0.9438125677080853,0.0017556696067169576,3
-multilayer,Multi-layer AnomalyDINO,8,mean_classification_au_roc,0.9703499999999999,0.007132329455149276,3
-multilayer,Multi-layer AnomalyDINO,8,mean_classification_ap,0.9807617603970872,0.0041593636547593675,3
+multilayer,Multi-layer AnomalyDINO,4,mean_segmentation_au_roc,0.9833250833959318,0.00028678045751191436,3
+multilayer,Multi-layer AnomalyDINO,4,mean_au_pro,,0.0,0
+multilayer,Multi-layer AnomalyDINO,8,mean_classification_au_roc,0.970350925925926,0.007143709101895944,3
+multilayer,Multi-layer AnomalyDINO,8,mean_classification_ap,0.9807570894229428,0.004161607252582321,3
 multilayer,Multi-layer AnomalyDINO,8,mean_classification_f1,0.9445299948322475,0.009517116394627777,3
-multilayer,Multi-layer AnomalyDINO,8,mean_segmentation_au_roc,0.9705002750180177,0.0007762026393881311,3
-multilayer,Multi-layer AnomalyDINO,8,mean_au_pro,0.9461454772037019,0.0017010611829567175,3
-anomalydino,AnomalyDINO,1,mean_classification_au_roc,0.9460796296296295,0.010278090585830317,3
-anomalydino,AnomalyDINO,1,mean_classification_ap,0.9676658032273887,0.007555424730847796,3
-anomalydino,AnomalyDINO,1,mean_classification_f1,0.9149571613721439,0.006775358588921181,3
-anomalydino,AnomalyDINO,1,mean_segmentation_au_roc,0.9641909480273712,0.0011137775297516063,3
-anomalydino,AnomalyDINO,1,mean_au_pro,0.9346280525127008,0.001437228959431745,3
-anomalydino,AnomalyDINO,2,mean_classification_au_roc,0.9532537037037035,0.005686092339255087,3
-anomalydino,AnomalyDINO,2,mean_classification_ap,0.9715966717171499,0.003305297223825688,3
+multilayer,Multi-layer AnomalyDINO,8,mean_segmentation_au_roc,0.9844406213496316,0.0003340769833806719,3
+multilayer,Multi-layer AnomalyDINO,8,mean_au_pro,,0.0,0
+anomalydino,AnomalyDINO,1,mean_classification_au_roc,0.9460675925925925,0.010255894621416252,3
+anomalydino,AnomalyDINO,1,mean_classification_ap,0.9676445415383245,0.007535358633076126,3
+anomalydino,AnomalyDINO,1,mean_classification_f1,0.9147393949852233,0.006448934342193517,3
+anomalydino,AnomalyDINO,1,mean_segmentation_au_roc,0.9807556155242101,0.0006377853490457529,3
+anomalydino,AnomalyDINO,1,mean_au_pro,,0.0,0
+anomalydino,AnomalyDINO,2,mean_classification_au_roc,0.9532564814814815,0.0056896974342229185,3
+anomalydino,AnomalyDINO,2,mean_classification_ap,0.9715977345883261,0.003306389553717374,3
 anomalydino,AnomalyDINO,2,mean_classification_f1,0.9233197369053282,0.0033122944287440107,3
-anomalydino,AnomalyDINO,2,mean_segmentation_au_roc,0.9664544811984705,0.0008185038599452374,3
-anomalydino,AnomalyDINO,2,mean_au_pro,0.9385591809649241,0.0013236043560659221,3
-anomalydino,AnomalyDINO,4,mean_classification_au_roc,0.9615185185185186,0.0049120107689456845,3
-anomalydino,AnomalyDINO,4,mean_classification_ap,0.9765390623058693,0.0029888483660305614,3
-anomalydino,AnomalyDINO,4,mean_classification_f1,0.9336276987053557,0.008159409155548055,3
-anomalydino,AnomalyDINO,4,mean_segmentation_au_roc,0.968875128431697,0.0003103642799957928,3
-anomalydino,AnomalyDINO,4,mean_au_pro,0.9420610816802757,0.0011359831458380811,3
-anomalydino,AnomalyDINO,8,mean_classification_au_roc,0.9661574074074074,0.00697995660722057,3
-anomalydino,AnomalyDINO,8,mean_classification_ap,0.9786699327034291,0.00398310862077539,3
+anomalydino,AnomalyDINO,2,mean_segmentation_au_roc,0.9821478281868594,0.000816120380829792,3
+anomalydino,AnomalyDINO,2,mean_au_pro,,0.0,0
+anomalydino,AnomalyDINO,4,mean_classification_au_roc,0.9615157407407408,0.004892257625144236,3
+anomalydino,AnomalyDINO,4,mean_classification_ap,0.9765294753617586,0.0029729537031749713,3
+anomalydino,AnomalyDINO,4,mean_classification_f1,0.9333767244175305,0.007731257343418134,3
+anomalydino,AnomalyDINO,4,mean_segmentation_au_roc,0.9835837744810992,0.0003820378170448016,3
+anomalydino,AnomalyDINO,4,mean_au_pro,,0.0,0
+anomalydino,AnomalyDINO,8,mean_classification_au_roc,0.9661675925925927,0.00697115216076648,3
+anomalydino,AnomalyDINO,8,mean_classification_ap,0.9786707122042225,0.0039824579634753525,3
 anomalydino,AnomalyDINO,8,mean_classification_f1,0.9410783959849494,0.009291428589854909,3
-anomalydino,AnomalyDINO,8,mean_segmentation_au_roc,0.9702980979375339,0.0006552556075821407,3
-anomalydino,AnomalyDINO,8,mean_au_pro,0.9438704303294423,0.002204229589218951,3
+anomalydino,AnomalyDINO,8,mean_segmentation_au_roc,0.9846261802092617,0.00014070362636042967,3
+anomalydino,AnomalyDINO,8,mean_au_pro,,0.0,0

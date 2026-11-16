@@ -1,337 +1,289 @@
 method,method_label,shot,category,metric,mean,std,seed_count
-template,Template difference,1,candle,mean_classification_au_roc,0.4594666666666667,0.038507445167568974,3
-template,Template difference,1,candle,mean_classification_ap,0.4574218397723675,0.028040216590183756,3
-template,Template difference,1,candle,mean_classification_f1,0.6775055714985042,0.007266752937130573,3
-template,Template difference,1,candle,mean_segmentation_au_roc,0.2689789742711154,0.009765006515723448,3
-template,Template difference,1,capsules,mean_classification_au_roc,0.5535,0.0046933759467762326,3
-template,Template difference,1,capsules,mean_classification_ap,0.6542452244897025,0.01648926642893336,3
-template,Template difference,1,capsules,mean_classification_f1,0.7742271804771805,0.006260608991785738,3
-template,Template difference,1,capsules,mean_segmentation_au_roc,0.28881180273731505,0.03525845420433126,3
-template,Template difference,1,cashew,mean_classification_au_roc,0.5869333333333334,0.1245889775755999,3
-template,Template difference,1,cashew,mean_classification_ap,0.7231234230020497,0.11905092771469643,3
-template,Template difference,1,cashew,mean_classification_f1,0.8184606405572268,0.0018538286303347378,3
-template,Template difference,1,cashew,mean_segmentation_au_roc,0.4927858265463651,0.037703697411182145,3
-template,Template difference,1,chewinggum,mean_classification_au_roc,0.5165333333333333,0.03460423866137406,3
-template,Template difference,1,chewinggum,mean_classification_ap,0.7024550035002802,0.027529468298234595,3
+template,Template difference,1,candle,mean_classification_au_roc,0.4973666666666667,0.045127190620880976,3
+template,Template difference,1,candle,mean_classification_ap,0.5339021063398095,0.07127201703862242,3
+template,Template difference,1,candle,mean_classification_f1,0.6735309387410351,0.0061861546316077974,3
+template,Template difference,1,candle,mean_segmentation_au_roc,0.6521156132350344,0.012056183745972894,3
+template,Template difference,1,capsules,mean_classification_au_roc,0.5933333333333334,0.05057749829057715,3
+template,Template difference,1,capsules,mean_classification_ap,0.6986738547757545,0.02664321341732931,3
+template,Template difference,1,capsules,mean_classification_f1,0.7726130148005148,0.0007140251277983928,3
+template,Template difference,1,capsules,mean_segmentation_au_roc,0.5369155572502168,0.005443538677698667,3
+template,Template difference,1,cashew,mean_classification_au_roc,0.5792,0.025114935795259353,3
+template,Template difference,1,cashew,mean_classification_ap,0.7323948755129889,0.021603334043773043,3
+template,Template difference,1,cashew,mean_classification_f1,0.8026903487005356,0.0033564821275903936,3
+template,Template difference,1,cashew,mean_segmentation_au_roc,0.40908093866229,0.004327281876791127,3
+template,Template difference,1,chewinggum,mean_classification_au_roc,0.5414666666666667,0.03881975442134243,3
+template,Template difference,1,chewinggum,mean_classification_ap,0.7052608293969951,0.0217769308691198,3
 template,Template difference,1,chewinggum,mean_classification_f1,0.8000000000000002,1.3597399555105182e-16,3
-template,Template difference,1,chewinggum,mean_segmentation_au_roc,0.6014254898320602,0.07668861610488638,3
-template,Template difference,1,fryum,mean_classification_au_roc,0.1832,0.03684725227204871,3
-template,Template difference,1,fryum,mean_classification_ap,0.4980798897368983,0.013426650644672937,3
-template,Template difference,1,fryum,mean_classification_f1,0.8000000000000002,1.3597399555105182e-16,3
-template,Template difference,1,fryum,mean_segmentation_au_roc,0.5237938213175116,0.051442174822563316,3
-template,Template difference,1,pipe_fryum,mean_classification_au_roc,0.7876666666666666,0.07408166664791858,3
-template,Template difference,1,pipe_fryum,mean_classification_ap,0.859776398189339,0.0414993780102089,3
-template,Template difference,1,pipe_fryum,mean_classification_f1,0.8459163059163058,0.016257779257737127,3
-template,Template difference,1,pipe_fryum,mean_segmentation_au_roc,0.4034360405011903,0.09823771938679458,3
-template,Template difference,2,candle,mean_classification_au_roc,0.535,0.09592877566194616,3
-template,Template difference,2,candle,mean_classification_ap,0.5210902366951823,0.09414790064722198,3
-template,Template difference,2,candle,mean_classification_f1,0.6848942551461809,0.013267331018572118,3
-template,Template difference,2,candle,mean_segmentation_au_roc,0.2558338064131757,0.01475093051252876,3
-template,Template difference,2,capsules,mean_classification_au_roc,0.6023888888888889,0.08641025102082203,3
-template,Template difference,2,capsules,mean_classification_ap,0.7068404050419831,0.08727155574948259,3
-template,Template difference,2,capsules,mean_classification_f1,0.7727394608107052,0.0004772074732955292,3
-template,Template difference,2,capsules,mean_segmentation_au_roc,0.3332389129455825,0.009903819132046535,3
-template,Template difference,2,cashew,mean_classification_au_roc,0.5696,0.14107884320478384,3
-template,Template difference,2,cashew,mean_classification_ap,0.7254628911850919,0.11568112349286964,3
-template,Template difference,2,cashew,mean_classification_f1,0.8140549188387576,0.005670119424756664,3
-template,Template difference,2,cashew,mean_segmentation_au_roc,0.5075182920601552,0.01374952309151481,3
-template,Template difference,2,chewinggum,mean_classification_au_roc,0.5011333333333333,0.045529916904529205,3
-template,Template difference,2,chewinggum,mean_classification_ap,0.6819933876378448,0.018660221779477335,3
-template,Template difference,2,chewinggum,mean_classification_f1,0.8043360433604336,0.007510247404092593,3
-template,Template difference,2,chewinggum,mean_segmentation_au_roc,0.47146001483129013,0.18276111884370244,3
-template,Template difference,2,fryum,mean_classification_au_roc,0.18846666666666667,0.023925161093153218,3
-template,Template difference,2,fryum,mean_classification_ap,0.4997738615918212,0.009439466775712805,3
-template,Template difference,2,fryum,mean_classification_f1,0.8000000000000002,1.3597399555105182e-16,3
-template,Template difference,2,fryum,mean_segmentation_au_roc,0.5238717029489155,0.04033122362749686,3
-template,Template difference,2,pipe_fryum,mean_classification_au_roc,0.7709999999999999,0.06168273664486685,3
-template,Template difference,2,pipe_fryum,mean_classification_ap,0.8489072417824537,0.03333312364106614,3
-template,Template difference,2,pipe_fryum,mean_classification_f1,0.8421403461932097,0.013413276486468166,3
-template,Template difference,2,pipe_fryum,mean_segmentation_au_roc,0.4588168281584392,0.008930286557687774,3
-template,Template difference,4,candle,mean_classification_au_roc,0.5934333333333334,0.11079676589744544,3
-template,Template difference,4,candle,mean_classification_ap,0.5619346283236276,0.09978635884994437,3
-template,Template difference,4,candle,mean_classification_f1,0.7030535152409249,0.02064643696341899,3
-template,Template difference,4,candle,mean_segmentation_au_roc,0.2578878038540519,0.017526776741224107,3
-template,Template difference,4,capsules,mean_classification_au_roc,0.5368333333333334,0.020757194201315145,3
-template,Template difference,4,capsules,mean_classification_ap,0.6749622605043898,0.03224952846193247,3
-template,Template difference,4,capsules,mean_classification_f1,0.7704566349984677,0.0021232617929130833,3
-template,Template difference,4,capsules,mean_segmentation_au_roc,0.4047729595394077,0.05396326856834,3
-template,Template difference,4,cashew,mean_classification_au_roc,0.5862666666666666,0.13183843647940202,3
-template,Template difference,4,cashew,mean_classification_ap,0.7162148267463772,0.10187613195436108,3
-template,Template difference,4,cashew,mean_classification_f1,0.8134928404699995,0.005509974556182805,3
-template,Template difference,4,cashew,mean_segmentation_au_roc,0.4948818486570934,0.024100009531715025,3
-template,Template difference,4,chewinggum,mean_classification_au_roc,0.5702666666666666,0.10158195377788977,3
-template,Template difference,4,chewinggum,mean_classification_ap,0.7092949376043259,0.03427438116605768,3
-template,Template difference,4,chewinggum,mean_classification_f1,0.809366391184573,0.009103422392208434,3
-template,Template difference,4,chewinggum,mean_segmentation_au_roc,0.3752760024165252,0.1975952250254593,3
-template,Template difference,4,fryum,mean_classification_au_roc,0.17353333333333332,0.03594458698237236,3
-template,Template difference,4,fryum,mean_classification_ap,0.49529515529177254,0.013596391770964517,3
-template,Template difference,4,fryum,mean_classification_f1,0.8000000000000002,1.3597399555105182e-16,3
-template,Template difference,4,fryum,mean_segmentation_au_roc,0.5305357536626327,0.03523115256405102,3
-template,Template difference,4,pipe_fryum,mean_classification_au_roc,0.8111333333333333,0.021626218655449985,3
-template,Template difference,4,pipe_fryum,mean_classification_ap,0.8653350131200975,0.01111536094311789,3
-template,Template difference,4,pipe_fryum,mean_classification_f1,0.8580322128851541,0.012829825415782276,3
-template,Template difference,4,pipe_fryum,mean_segmentation_au_roc,0.4345229498909718,0.04195844051123026,3
-template,Template difference,8,candle,mean_classification_au_roc,0.5962999999999999,0.07310738676768584,3
-template,Template difference,8,candle,mean_classification_ap,0.5457265032751156,0.07088585491668621,3
-template,Template difference,8,candle,mean_classification_f1,0.7185371125887237,0.003909574713100671,3
-template,Template difference,8,candle,mean_segmentation_au_roc,0.2636023534776744,0.009549951557214095,3
-template,Template difference,8,capsules,mean_classification_au_roc,0.4942777777777778,0.043556264166571323,3
-template,Template difference,8,capsules,mean_classification_ap,0.6568246483261908,0.0477928135242371,3
-template,Template difference,8,capsules,mean_classification_f1,0.7692307692307693,0.0,3
-template,Template difference,8,capsules,mean_segmentation_au_roc,0.4791962786052233,0.053254174035930704,3
-template,Template difference,8,cashew,mean_classification_au_roc,0.6592666666666667,0.10472866528956311,3
-template,Template difference,8,cashew,mean_classification_ap,0.7735537603871133,0.0848820699812472,3
-template,Template difference,8,cashew,mean_classification_f1,0.8311087038117257,0.0064174844685134175,3
-template,Template difference,8,cashew,mean_segmentation_au_roc,0.47150513066501815,0.036194867355439614,3
-template,Template difference,8,chewinggum,mean_classification_au_roc,0.6119333333333333,0.024193663082165383,3
-template,Template difference,8,chewinggum,mean_classification_ap,0.7163554623616587,0.02161146894551464,3
-template,Template difference,8,chewinggum,mean_classification_f1,0.809346373358113,0.007651886989738853,3
-template,Template difference,8,chewinggum,mean_segmentation_au_roc,0.26571528063666405,0.04748891974937331,3
-template,Template difference,8,fryum,mean_classification_au_roc,0.17240000000000003,0.03619447471645361,3
-template,Template difference,8,fryum,mean_classification_ap,0.4948497449743086,0.013763270113775424,3
-template,Template difference,8,fryum,mean_classification_f1,0.8010709504685409,0.001854940623902448,3
-template,Template difference,8,fryum,mean_segmentation_au_roc,0.5669597612607505,0.03499270788521597,3
-template,Template difference,8,pipe_fryum,mean_classification_au_roc,0.8417333333333333,0.030756679491345165,3
-template,Template difference,8,pipe_fryum,mean_classification_ap,0.8904613951113678,0.016783302300046352,3
-template,Template difference,8,pipe_fryum,mean_classification_f1,0.8621685924625809,0.013213179874028992,3
-template,Template difference,8,pipe_fryum,mean_segmentation_au_roc,0.4477237488215144,0.038222722392165606,3
+template,Template difference,1,chewinggum,mean_segmentation_au_roc,0.20467923151379494,0.005170264972134876,3
+template,Template difference,1,fryum,mean_classification_au_roc,0.6386666666666666,0.08138460132809731,3
+template,Template difference,1,fryum,mean_classification_ap,0.7859014530820136,0.067857247799204,3
+template,Template difference,1,fryum,mean_classification_f1,0.8073059360730594,0.01265425247538907,3
+template,Template difference,1,fryum,mean_segmentation_au_roc,0.8688668850966831,0.011830032102534707,3
+template,Template difference,1,pipe_fryum,mean_classification_au_roc,0.5321333333333333,0.00781366324673221,3
+template,Template difference,1,pipe_fryum,mean_classification_ap,0.7251119885803053,0.026342532730606997,3
+template,Template difference,1,pipe_fryum,mean_classification_f1,0.8037920389039149,0.004112337380756686,3
+template,Template difference,1,pipe_fryum,mean_segmentation_au_roc,0.7419677572916094,0.0076907053233652685,3
+template,Template difference,2,candle,mean_classification_au_roc,0.5804,0.15090248506900072,3
+template,Template difference,2,candle,mean_classification_ap,0.62521742733855,0.12497171360326555,3
+template,Template difference,2,candle,mean_classification_f1,0.6904533844189017,0.029986860775428264,3
+template,Template difference,2,candle,mean_segmentation_au_roc,0.654831599295697,0.01278619461255273,3
+template,Template difference,2,capsules,mean_classification_au_roc,0.5753888888888888,0.007918567023376365,3
+template,Template difference,2,capsules,mean_classification_ap,0.7075703266251931,0.028294645886399745,3
+template,Template difference,2,capsules,mean_classification_f1,0.7732983019510534,0.0037020054619767576,3
+template,Template difference,2,capsules,mean_segmentation_au_roc,0.5591649629896547,0.0405781245362319,3
+template,Template difference,2,cashew,mean_classification_au_roc,0.5861333333333333,0.04707879919170981,3
+template,Template difference,2,cashew,mean_classification_ap,0.7435510141696812,0.03459485199856146,3
+template,Template difference,2,cashew,mean_classification_f1,0.8043143842778129,0.0018511869920463937,3
+template,Template difference,2,cashew,mean_segmentation_au_roc,0.4001570812309237,0.0016105439513549944,3
+template,Template difference,2,chewinggum,mean_classification_au_roc,0.5681333333333334,0.03023265342859161,3
+template,Template difference,2,chewinggum,mean_classification_ap,0.724550268558498,0.0057503138835493335,3
+template,Template difference,2,chewinggum,mean_classification_f1,0.8027131255387688,0.0033457962308621626,3
+template,Template difference,2,chewinggum,mean_segmentation_au_roc,0.2084674056578024,0.004592751897243709,3
+template,Template difference,2,fryum,mean_classification_au_roc,0.6341333333333333,0.03577839198920663,3
+template,Template difference,2,fryum,mean_classification_ap,0.7821219689183151,0.020604055240042756,3
+template,Template difference,2,fryum,mean_classification_f1,0.8063172043010752,0.006251083846362066,3
+template,Template difference,2,fryum,mean_segmentation_au_roc,0.8696706383786762,0.006821638337563479,3
+template,Template difference,2,pipe_fryum,mean_classification_au_roc,0.5112,0.026229754097207996,3
+template,Template difference,2,pipe_fryum,mean_classification_ap,0.7102941854915512,0.025773551708647112,3
+template,Template difference,2,pipe_fryum,mean_classification_f1,0.8021419009370817,0.001854940623902448,3
+template,Template difference,2,pipe_fryum,mean_segmentation_au_roc,0.7324543272249352,0.008751536958241631,3
+template,Template difference,4,candle,mean_classification_au_roc,0.5798333333333333,0.12666058318724624,3
+template,Template difference,4,candle,mean_classification_ap,0.6093495132795642,0.0900727165282275,3
+template,Template difference,4,candle,mean_classification_f1,0.6834849809682938,0.014618342019691396,3
+template,Template difference,4,candle,mean_segmentation_au_roc,0.6667725616927808,0.016845841672437155,3
+template,Template difference,4,capsules,mean_classification_au_roc,0.5875,0.05737329034005667,3
+template,Template difference,4,capsules,mean_classification_ap,0.6979322714751514,0.022295463463127635,3
+template,Template difference,4,capsules,mean_classification_f1,0.776646149329136,0.003905758175954822,3
+template,Template difference,4,capsules,mean_segmentation_au_roc,0.5637447628194637,0.05626594478184993,3
+template,Template difference,4,cashew,mean_classification_au_roc,0.5670666666666667,0.029111051738701082,3
+template,Template difference,4,cashew,mean_classification_ap,0.713135972214329,0.03516071881161316,3
+template,Template difference,4,cashew,mean_classification_f1,0.8048944375744641,0.004264539355951304,3
+template,Template difference,4,cashew,mean_segmentation_au_roc,0.399072259327755,0.0042489192430597384,3
+template,Template difference,4,chewinggum,mean_classification_au_roc,0.5859333333333333,0.015602991166226291,3
+template,Template difference,4,chewinggum,mean_classification_ap,0.7224672681104728,0.0013231542776195842,3
+template,Template difference,4,chewinggum,mean_classification_f1,0.8062511429905056,0.006627256071832072,3
+template,Template difference,4,chewinggum,mean_segmentation_au_roc,0.21880540863632844,0.007176185030933368,3
+template,Template difference,4,fryum,mean_classification_au_roc,0.6612,0.02982415128716992,3
+template,Template difference,4,fryum,mean_classification_ap,0.7859649836651843,0.007802315487316153,3
+template,Template difference,4,fryum,mean_classification_f1,0.8141115416471189,0.016747254711551546,3
+template,Template difference,4,fryum,mean_segmentation_au_roc,0.876251901537708,0.0029989467458324502,3
+template,Template difference,4,pipe_fryum,mean_classification_au_roc,0.5119333333333334,0.03709734941115517,3
+template,Template difference,4,pipe_fryum,mean_classification_ap,0.7059285733673931,0.04204298224897426,3
+template,Template difference,4,pipe_fryum,mean_classification_f1,0.8037898629035669,0.0009429713721031409,3
+template,Template difference,4,pipe_fryum,mean_segmentation_au_roc,0.744386562276501,0.008891163356066462,3
+template,Template difference,8,candle,mean_classification_au_roc,0.6902333333333334,0.06913185469328395,3
+template,Template difference,8,candle,mean_classification_ap,0.7010532670506637,0.04159986395022901,3
+template,Template difference,8,candle,mean_classification_f1,0.7094483893584345,0.042731640968771946,3
+template,Template difference,8,candle,mean_segmentation_au_roc,0.6792614381956777,0.008579446603583514,3
+template,Template difference,8,capsules,mean_classification_au_roc,0.651611111111111,0.09975001160308111,3
+template,Template difference,8,capsules,mean_classification_ap,0.7414337407417989,0.06878723774348579,3
+template,Template difference,8,capsules,mean_classification_f1,0.7845687868643392,0.017708147944037463,3
+template,Template difference,8,capsules,mean_segmentation_au_roc,0.5621501289736145,0.03310928778246309,3
+template,Template difference,8,cashew,mean_classification_au_roc,0.5898,0.037393582337080226,3
+template,Template difference,8,cashew,mean_classification_ap,0.7213549400616251,0.023215983616923286,3
+template,Template difference,8,cashew,mean_classification_f1,0.8037920389039149,0.004112337380756686,3
+template,Template difference,8,cashew,mean_segmentation_au_roc,0.3908945972494129,0.005377017349002037,3
+template,Template difference,8,chewinggum,mean_classification_au_roc,0.5388666666666667,0.0351848452225292,3
+template,Template difference,8,chewinggum,mean_classification_ap,0.6926847064792273,0.0215006110395266,3
+template,Template difference,8,chewinggum,mean_classification_f1,0.8064777327935223,0.005609881158117848,3
+template,Template difference,8,chewinggum,mean_segmentation_au_roc,0.22489140457028411,0.0018474830347831792,3
+template,Template difference,8,fryum,mean_classification_au_roc,0.6596666666666667,0.04420603277080319,3
+template,Template difference,8,fryum,mean_classification_ap,0.7767643947960279,0.014227208680245768,3
+template,Template difference,8,fryum,mean_classification_f1,0.8219163905285277,0.017183459801341904,3
+template,Template difference,8,fryum,mean_segmentation_au_roc,0.8750407268744981,0.0031398756942823797,3
+template,Template difference,8,pipe_fryum,mean_classification_au_roc,0.5126666666666667,0.017001568555087318,3
+template,Template difference,8,pipe_fryum,mean_classification_ap,0.7013045968125434,0.013381531941205853,3
+template,Template difference,8,pipe_fryum,mean_classification_f1,0.8049283154121865,0.004370519139160258,3
+template,Template difference,8,pipe_fryum,mean_segmentation_au_roc,0.7412095374470774,0.013169175118385413,3
 multilayer,Multi-layer AnomalyDINO,1,candle,mean_classification_au_roc,0.9044,0.021454370184183974,3
-multilayer,Multi-layer AnomalyDINO,1,candle,mean_classification_ap,0.9181704892136288,0.016917481288823005,3
+multilayer,Multi-layer AnomalyDINO,1,candle,mean_classification_ap,0.9181775965341691,0.016929382834562644,3
 multilayer,Multi-layer AnomalyDINO,1,candle,mean_classification_f1,0.854039058377822,0.01590676319228551,3
-multilayer,Multi-layer AnomalyDINO,1,candle,mean_segmentation_au_roc,0.951322107636738,0.0008056840052604057,3
-multilayer,Multi-layer AnomalyDINO,1,candle,mean_au_pro,0.8728019498899925,0.010671272321130357,3
+multilayer,Multi-layer AnomalyDINO,1,candle,mean_segmentation_au_roc,0.985320620385823,0.0004943839392964838,3
 multilayer,Multi-layer AnomalyDINO,1,capsules,mean_classification_au_roc,0.9748333333333333,0.008607167555783548,3
-multilayer,Multi-layer AnomalyDINO,1,capsules,mean_classification_ap,0.9861980978287411,0.004463122142761126,3
+multilayer,Multi-layer AnomalyDINO,1,capsules,mean_classification_ap,0.9861980978287411,0.004463122142761066,3
 multilayer,Multi-layer AnomalyDINO,1,capsules,mean_classification_f1,0.9350818843116661,0.01572385906882739,3
-multilayer,Multi-layer AnomalyDINO,1,capsules,mean_segmentation_au_roc,0.9204762465347288,0.003035087968622873,3
-multilayer,Multi-layer AnomalyDINO,1,capsules,mean_au_pro,0.908293286981065,0.005256776179819781,3
+multilayer,Multi-layer AnomalyDINO,1,capsules,mean_segmentation_au_roc,0.9547929426312226,0.0024490739961712717,3
 multilayer,Multi-layer AnomalyDINO,1,cashew,mean_classification_au_roc,0.9373333333333335,0.00801332224070225,3
-multilayer,Multi-layer AnomalyDINO,1,cashew,mean_classification_ap,0.9695695763852701,0.0052795227784371256,3
+multilayer,Multi-layer AnomalyDINO,1,cashew,mean_classification_ap,0.9695722454922632,0.0052841263586888634,3
 multilayer,Multi-layer AnomalyDINO,1,cashew,mean_classification_f1,0.9194116671941167,0.01466069441092101,3
-multilayer,Multi-layer AnomalyDINO,1,cashew,mean_segmentation_au_roc,0.9762847362615704,0.0007788867059629322,3
-multilayer,Multi-layer AnomalyDINO,1,cashew,mean_au_pro,0.9620536503918422,0.004843615934894743,3
+multilayer,Multi-layer AnomalyDINO,1,cashew,mean_segmentation_au_roc,0.9868280462932035,0.0002814533538356057,3
 multilayer,Multi-layer AnomalyDINO,1,chewinggum,mean_classification_au_roc,0.9878,0.0050477717856496135,3
 multilayer,Multi-layer AnomalyDINO,1,chewinggum,mean_classification_ap,0.9945673283761806,0.001983810940071381,3
 multilayer,Multi-layer AnomalyDINO,1,chewinggum,mean_classification_f1,0.9699979997999799,0.0003000350034585978,3
-multilayer,Multi-layer AnomalyDINO,1,chewinggum,mean_segmentation_au_roc,0.9934276796985225,0.00016277827485387082,3
-multilayer,Multi-layer AnomalyDINO,1,chewinggum,mean_au_pro,0.951932676007358,0.003971052056171075,3
+multilayer,Multi-layer AnomalyDINO,1,chewinggum,mean_segmentation_au_roc,0.9955957033441226,0.00011374526525085998,3
 multilayer,Multi-layer AnomalyDINO,1,fryum,mean_classification_au_roc,0.9623333333333334,0.015850972630514888,3
 multilayer,Multi-layer AnomalyDINO,1,fryum,mean_classification_ap,0.9835565646292563,0.006471190313579324,3
 multilayer,Multi-layer AnomalyDINO,1,fryum,mean_classification_f1,0.9338192546314374,0.009867322828779246,3
-multilayer,Multi-layer AnomalyDINO,1,fryum,mean_segmentation_au_roc,0.9562355268637956,0.0010099767434075331,3
-multilayer,Multi-layer AnomalyDINO,1,fryum,mean_au_pro,0.938592894354103,0.00210551634784903,3
+multilayer,Multi-layer AnomalyDINO,1,fryum,mean_segmentation_au_roc,0.9678346560379566,0.0004743066825216266,3
 multilayer,Multi-layer AnomalyDINO,1,pipe_fryum,mean_classification_au_roc,0.9324666666666666,0.02180122320727289,3
 multilayer,Multi-layer AnomalyDINO,1,pipe_fryum,mean_classification_ap,0.9638861395908096,0.013504801802617126,3
 multilayer,Multi-layer AnomalyDINO,1,pipe_fryum,mean_classification_f1,0.9139823639440635,0.02170035391231189,3
-multilayer,Multi-layer AnomalyDINO,1,pipe_fryum,mean_segmentation_au_roc,0.9869604402355289,0.0003412977561488808,3
-multilayer,Multi-layer AnomalyDINO,1,pipe_fryum,mean_au_pro,0.982076652110418,0.001033390714331432,3
+multilayer,Multi-layer AnomalyDINO,1,pipe_fryum,mean_segmentation_au_roc,0.9908910407553382,0.000733922400788145,3
 multilayer,Multi-layer AnomalyDINO,2,candle,mean_classification_au_roc,0.9177,0.0068942004612572525,3
-multilayer,Multi-layer AnomalyDINO,2,candle,mean_classification_ap,0.9265824607002311,0.004114775427162265,3
+multilayer,Multi-layer AnomalyDINO,2,candle,mean_classification_ap,0.9265856658284363,0.004117606309620652,3
 multilayer,Multi-layer AnomalyDINO,2,candle,mean_classification_f1,0.8642244224422443,0.006155624254539652,3
-multilayer,Multi-layer AnomalyDINO,2,candle,mean_segmentation_au_roc,0.9525165397232014,0.0011391972007235788,3
-multilayer,Multi-layer AnomalyDINO,2,candle,mean_au_pro,0.8769783873182683,0.0064314955117385575,3
+multilayer,Multi-layer AnomalyDINO,2,candle,mean_segmentation_au_roc,0.9866352491774903,0.0005523156583210855,3
 multilayer,Multi-layer AnomalyDINO,2,capsules,mean_classification_au_roc,0.981388888888889,0.006866450913546799,3
-multilayer,Multi-layer AnomalyDINO,2,capsules,mean_classification_ap,0.9896264461035361,0.003338297145563284,3
+multilayer,Multi-layer AnomalyDINO,2,capsules,mean_classification_ap,0.9896264461035362,0.0033382971455632265,3
 multilayer,Multi-layer AnomalyDINO,2,capsules,mean_classification_f1,0.9469678489535053,0.010775772214297447,3
-multilayer,Multi-layer AnomalyDINO,2,capsules,mean_segmentation_au_roc,0.9244683346235335,0.0022778416331431864,3
-multilayer,Multi-layer AnomalyDINO,2,capsules,mean_au_pro,0.915595122989029,0.004068502606152961,3
-multilayer,Multi-layer AnomalyDINO,2,cashew,mean_classification_au_roc,0.9384,0.0017435595774162684,3
-multilayer,Multi-layer AnomalyDINO,2,cashew,mean_classification_ap,0.9704249775078675,0.0007012007024946072,3
+multilayer,Multi-layer AnomalyDINO,2,capsules,mean_segmentation_au_roc,0.9569625259383523,0.0015404872655055818,3
+multilayer,Multi-layer AnomalyDINO,2,cashew,mean_classification_au_roc,0.9384333333333332,0.0017097758137642272,3
+multilayer,Multi-layer AnomalyDINO,2,cashew,mean_classification_ap,0.9704287482861303,0.000697971720341377,3
 multilayer,Multi-layer AnomalyDINO,2,cashew,mean_classification_f1,0.9160230888101082,0.006143228751411162,3
-multilayer,Multi-layer AnomalyDINO,2,cashew,mean_segmentation_au_roc,0.9807923017564756,0.002353030575654112,3
-multilayer,Multi-layer AnomalyDINO,2,cashew,mean_au_pro,0.9679982826084669,0.006922833373995701,3
-multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_classification_au_roc,0.9888,0.001732050807568879,3
-multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_classification_ap,0.9949409378748584,0.0007433909256863467,3
+multilayer,Multi-layer AnomalyDINO,2,cashew,mean_segmentation_au_roc,0.9899700568281125,0.0014553062231329027,3
+multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_classification_au_roc,0.9887666666666667,0.0017616280348966042,3
+multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_classification_ap,0.9949157662501443,0.0007654048733785948,3
 multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_classification_f1,0.9651114539029811,0.005593730640836597,3
-multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_segmentation_au_roc,0.9937200790381301,0.0002744210450400801,3
-multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_au_pro,0.954233383270951,0.0029992392860840648,3
+multilayer,Multi-layer AnomalyDINO,2,chewinggum,mean_segmentation_au_roc,0.9957926234897645,9.927494777088833e-05,3
 multilayer,Multi-layer AnomalyDINO,2,fryum,mean_classification_au_roc,0.9718666666666667,0.007489548272982369,3
 multilayer,Multi-layer AnomalyDINO,2,fryum,mean_classification_ap,0.9875243579024184,0.0029231297891050647,3
 multilayer,Multi-layer AnomalyDINO,2,fryum,mean_classification_f1,0.9413569378371914,0.0034534270466870538,3
-multilayer,Multi-layer AnomalyDINO,2,fryum,mean_segmentation_au_roc,0.9601369757368249,0.0008249586536353851,3
-multilayer,Multi-layer AnomalyDINO,2,fryum,mean_au_pro,0.9441434481179503,0.0021060940552540177,3
+multilayer,Multi-layer AnomalyDINO,2,fryum,mean_segmentation_au_roc,0.9704719012223878,0.0011283667468103282,3
 multilayer,Multi-layer AnomalyDINO,2,pipe_fryum,mean_classification_au_roc,0.9467333333333334,0.021591047527466826,3
 multilayer,Multi-layer AnomalyDINO,2,pipe_fryum,mean_classification_ap,0.9714307321845611,0.013575967725555407,3
 multilayer,Multi-layer AnomalyDINO,2,pipe_fryum,mean_classification_f1,0.9223237109503072,0.014942974847255647,3
-multilayer,Multi-layer AnomalyDINO,2,pipe_fryum,mean_segmentation_au_roc,0.9871584312019156,0.0011706908963839868,3
-multilayer,Multi-layer AnomalyDINO,2,pipe_fryum,mean_au_pro,0.9838826509013828,0.0007772516277268997,3
-multilayer,Multi-layer AnomalyDINO,4,candle,mean_classification_au_roc,0.9319333333333334,0.0041052811515574555,3
-multilayer,Multi-layer AnomalyDINO,4,candle,mean_classification_ap,0.9404924352425964,0.004524779957554048,3
+multilayer,Multi-layer AnomalyDINO,2,pipe_fryum,mean_segmentation_au_roc,0.9906844723503615,0.0011978417213814364,3
+multilayer,Multi-layer AnomalyDINO,4,candle,mean_classification_au_roc,0.9319333333333334,0.004105281151557502,3
+multilayer,Multi-layer AnomalyDINO,4,candle,mean_classification_ap,0.9404950072590573,0.004529216785031888,3
 multilayer,Multi-layer AnomalyDINO,4,candle,mean_classification_f1,0.8883408444408255,0.018593322957830623,3
-multilayer,Multi-layer AnomalyDINO,4,candle,mean_segmentation_au_roc,0.9546448883330626,0.000785700802763175,3
-multilayer,Multi-layer AnomalyDINO,4,candle,mean_au_pro,0.8839469736794467,0.002644572484387613,3
+multilayer,Multi-layer AnomalyDINO,4,candle,mean_segmentation_au_roc,0.9877351910331558,0.0002757681966234786,3
 multilayer,Multi-layer AnomalyDINO,4,capsules,mean_classification_au_roc,0.9853333333333333,0.005198824653494142,3
-multilayer,Multi-layer AnomalyDINO,4,capsules,mean_classification_ap,0.9918108606060588,0.0034602263124106137,3
+multilayer,Multi-layer AnomalyDINO,4,capsules,mean_classification_ap,0.9918108606060588,0.003460226312410574,3
 multilayer,Multi-layer AnomalyDINO,4,capsules,mean_classification_f1,0.9614794685990339,0.016606305445742722,3
-multilayer,Multi-layer AnomalyDINO,4,capsules,mean_segmentation_au_roc,0.9296663624703286,0.0015995766139027775,3
-multilayer,Multi-layer AnomalyDINO,4,capsules,mean_au_pro,0.9220627513337177,0.0015557186512337334,3
-multilayer,Multi-layer AnomalyDINO,4,cashew,mean_classification_au_roc,0.9404666666666667,0.011923645974840661,3
-multilayer,Multi-layer AnomalyDINO,4,cashew,mean_classification_ap,0.9695269038088224,0.004866307286000667,3
+multilayer,Multi-layer AnomalyDINO,4,capsules,mean_segmentation_au_roc,0.9600743201806289,0.0009334218108621487,3
+multilayer,Multi-layer AnomalyDINO,4,cashew,mean_classification_au_roc,0.9405000000000001,0.011920151005754944,3
+multilayer,Multi-layer AnomalyDINO,4,cashew,mean_classification_ap,0.96952826435304,0.004865390343328377,3
 multilayer,Multi-layer AnomalyDINO,4,cashew,mean_classification_f1,0.916195418240949,0.0061652729462352875,3
-multilayer,Multi-layer AnomalyDINO,4,cashew,mean_segmentation_au_roc,0.9832448024521049,0.0015137714700054704,3
-multilayer,Multi-layer AnomalyDINO,4,cashew,mean_au_pro,0.9693267235835886,0.005508855554898601,3
+multilayer,Multi-layer AnomalyDINO,4,cashew,mean_segmentation_au_roc,0.9914658495648183,0.0007826943497718378,3
 multilayer,Multi-layer AnomalyDINO,4,chewinggum,mean_classification_au_roc,0.9904666666666667,0.002100793500878488,3
 multilayer,Multi-layer AnomalyDINO,4,chewinggum,mean_classification_ap,0.9957039205017107,0.0010548770304184703,3
 multilayer,Multi-layer AnomalyDINO,4,chewinggum,mean_classification_f1,0.9715709956802264,0.0074658289506167,3
-multilayer,Multi-layer AnomalyDINO,4,chewinggum,mean_segmentation_au_roc,0.9940183276694067,5.921384220583274e-05,3
-multilayer,Multi-layer AnomalyDINO,4,chewinggum,mean_au_pro,0.9552306909978393,0.0024165411501626518,3
-multilayer,Multi-layer AnomalyDINO,4,fryum,mean_classification_au_roc,0.9766666666666666,0.00857049201232537,3
+multilayer,Multi-layer AnomalyDINO,4,chewinggum,mean_segmentation_au_roc,0.9959752712661598,9.25981322226744e-05,3
+multilayer,Multi-layer AnomalyDINO,4,fryum,mean_classification_au_roc,0.9767,0.008556284240252874,3
 multilayer,Multi-layer AnomalyDINO,4,fryum,mean_classification_ap,0.989615111108852,0.003823186143383563,3
 multilayer,Multi-layer AnomalyDINO,4,fryum,mean_classification_f1,0.9477709675729478,0.020212925154555694,3
-multilayer,Multi-layer AnomalyDINO,4,fryum,mean_segmentation_au_roc,0.9632594356868265,0.001090044288678014,3
-multilayer,Multi-layer AnomalyDINO,4,fryum,mean_au_pro,0.9474295244557713,0.0017118206667114974,3
+multilayer,Multi-layer AnomalyDINO,4,fryum,mean_segmentation_au_roc,0.9727890008745325,0.0012055585035963537,3
 multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_classification_au_roc,0.9686,0.017521415467935193,3
-multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_classification_ap,0.9832459357748453,0.01024459615576026,3
+multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_classification_ap,0.9832459357748453,0.010244596155760262,3
 multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_classification_f1,0.9482042321879246,0.013868127635251783,3
-multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_segmentation_au_roc,0.9887449974220526,0.0003354978115173567,3
-multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_au_pro,0.9848787421981484,0.002139339549014561,3
+multilayer,Multi-layer AnomalyDINO,4,pipe_fryum,mean_segmentation_au_roc,0.9919108674562963,0.0003037933802194135,3
 multilayer,Multi-layer AnomalyDINO,8,candle,mean_classification_au_roc,0.9398666666666666,0.004289910643980061,3
-multilayer,Multi-layer AnomalyDINO,8,candle,mean_classification_ap,0.9457362277561184,0.004136161492829846,3
+multilayer,Multi-layer AnomalyDINO,8,candle,mean_classification_ap,0.9457390288765667,0.0041359744816779525,3
 multilayer,Multi-layer AnomalyDINO,8,candle,mean_classification_f1,0.8937074829931974,0.01698553091448836,3
-multilayer,Multi-layer AnomalyDINO,8,candle,mean_segmentation_au_roc,0.9550876950204431,0.0022118321809641663,3
-multilayer,Multi-layer AnomalyDINO,8,candle,mean_au_pro,0.8848877471510631,0.00895976426305912,3
-multilayer,Multi-layer AnomalyDINO,8,capsules,mean_classification_au_roc,0.9838333333333334,0.009111957955224433,3
-multilayer,Multi-layer AnomalyDINO,8,capsules,mean_classification_ap,0.9911745031797933,0.0044714138461167535,3
+multilayer,Multi-layer AnomalyDINO,8,candle,mean_segmentation_au_roc,0.9880318245391454,0.0008499171285262278,3
+multilayer,Multi-layer AnomalyDINO,8,capsules,mean_classification_au_roc,0.9838055555555556,0.009115894746926222,3
+multilayer,Multi-layer AnomalyDINO,8,capsules,mean_classification_ap,0.99114225535628,0.004483773000147569,3
 multilayer,Multi-layer AnomalyDINO,8,capsules,mean_classification_f1,0.9634983498349835,0.015060357386356332,3
-multilayer,Multi-layer AnomalyDINO,8,capsules,mean_segmentation_au_roc,0.933235937690149,0.002207151768328638,3
-multilayer,Multi-layer AnomalyDINO,8,capsules,mean_au_pro,0.9270298625642432,0.0025037262018849584,3
-multilayer,Multi-layer AnomalyDINO,8,cashew,mean_classification_au_roc,0.9544,0.009141115905621158,3
+multilayer,Multi-layer AnomalyDINO,8,capsules,mean_segmentation_au_roc,0.9626802824779387,0.0015780958880008689,3
+multilayer,Multi-layer AnomalyDINO,8,cashew,mean_classification_au_roc,0.9544,0.00914111590562121,3
 multilayer,Multi-layer AnomalyDINO,8,cashew,mean_classification_ap,0.9762502970005524,0.004323045511101331,3
 multilayer,Multi-layer AnomalyDINO,8,cashew,mean_classification_f1,0.9319155232436215,0.011259877091134069,3
-multilayer,Multi-layer AnomalyDINO,8,cashew,mean_segmentation_au_roc,0.9848148328577274,0.00028726919063177885,3
-multilayer,Multi-layer AnomalyDINO,8,cashew,mean_au_pro,0.9731720825393438,0.0032984889702934107,3
-multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_classification_au_roc,0.9903333333333334,0.0020816659994661348,3
+multilayer,Multi-layer AnomalyDINO,8,cashew,mean_segmentation_au_roc,0.9922920431303973,6.301665246916193e-05,3
+multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_classification_au_roc,0.9903333333333334,0.0020816659994661968,3
 multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_classification_ap,0.9957030798726659,0.00089213310820135,3
 multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_classification_f1,0.9700295276451921,0.004687421337640252,3
-multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_segmentation_au_roc,0.993985843485402,0.0004715503983422595,3
-multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_au_pro,0.9559064017484284,0.0014252464181948522,3
-multilayer,Multi-layer AnomalyDINO,8,fryum,mean_classification_au_roc,0.9832000000000001,0.006069596362197384,3
+multilayer,Multi-layer AnomalyDINO,8,chewinggum,mean_segmentation_au_roc,0.9959230270514897,0.00033344223629936835,3
+multilayer,Multi-layer AnomalyDINO,8,fryum,mean_classification_au_roc,0.9832333333333333,0.006101092798288928,3
 multilayer,Multi-layer AnomalyDINO,8,fryum,mean_classification_ap,0.992330528416438,0.0026774610065292653,3
 multilayer,Multi-layer AnomalyDINO,8,fryum,mean_classification_f1,0.9540492212706729,0.010655208686267239,3
-multilayer,Multi-layer AnomalyDINO,8,fryum,mean_segmentation_au_roc,0.9662244671660504,0.0002067448791840438,3
-multilayer,Multi-layer AnomalyDINO,8,fryum,mean_au_pro,0.9514168874433716,0.0021363899073064195,3
+multilayer,Multi-layer AnomalyDINO,8,fryum,mean_segmentation_au_roc,0.9750742554794076,0.00035153589252154835,3
 multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_classification_au_roc,0.9704666666666667,0.017654838807911397,3
-multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_classification_ap,0.9833759261569543,0.01047430346063652,3
+multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_classification_ap,0.9833773470151529,0.010473512722352401,3
 multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_classification_f1,0.953979864005818,0.014296857892141768,3
-multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_segmentation_au_roc,0.9896528738883346,0.00015509027399655394,3
-multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_au_pro,0.984459881775761,0.0013006757515977455,3
-anomalydino,AnomalyDINO,1,candle,mean_classification_au_roc,0.9001333333333333,0.03134411162137689,3
-anomalydino,AnomalyDINO,1,candle,mean_classification_ap,0.9150859095197349,0.026630788624932643,3
+multilayer,Multi-layer AnomalyDINO,8,pipe_fryum,mean_segmentation_au_roc,0.9926422954194111,0.00022576349899729298,3
+anomalydino,AnomalyDINO,1,candle,mean_classification_au_roc,0.9001166666666668,0.03129158566345481,3
+anomalydino,AnomalyDINO,1,candle,mean_classification_ap,0.9150238713400499,0.026593901530279702,3
 anomalydino,AnomalyDINO,1,candle,mean_classification_f1,0.8401696822488901,0.02688381046626924,3
-anomalydino,AnomalyDINO,1,candle,mean_segmentation_au_roc,0.9529281817224206,0.0005569057606514999,3
-anomalydino,AnomalyDINO,1,candle,mean_au_pro,0.8775705379991194,0.008517045974115324,3
-anomalydino,AnomalyDINO,1,capsules,mean_classification_au_roc,0.9769444444444444,0.010179409136603671,3
-anomalydino,AnomalyDINO,1,capsules,mean_classification_ap,0.9871641618584969,0.005373176742732667,3
-anomalydino,AnomalyDINO,1,capsules,mean_classification_f1,0.9423793543613576,0.013413479446149366,3
-anomalydino,AnomalyDINO,1,capsules,mean_segmentation_au_roc,0.9155122020663512,0.004383342153298978,3
-anomalydino,AnomalyDINO,1,capsules,mean_au_pro,0.8993679832773065,0.00672597827500453,3
+anomalydino,AnomalyDINO,1,candle,mean_segmentation_au_roc,0.9850354395290296,0.0005893663824454881,3
+anomalydino,AnomalyDINO,1,capsules,mean_classification_au_roc,0.9768888888888889,0.01025553147944692,3
+anomalydino,AnomalyDINO,1,capsules,mean_classification_ap,0.9870979139816901,0.005458677506939682,3
+anomalydino,AnomalyDINO,1,capsules,mean_classification_f1,0.941072756039834,0.015373325322166285,3
+anomalydino,AnomalyDINO,1,capsules,mean_segmentation_au_roc,0.9571412473769035,0.002474305928584075,3
 anomalydino,AnomalyDINO,1,cashew,mean_classification_au_roc,0.9357333333333333,0.005873102530463172,3
 anomalydino,AnomalyDINO,1,cashew,mean_classification_ap,0.9704765828338884,0.002020524503822019,3
 anomalydino,AnomalyDINO,1,cashew,mean_classification_f1,0.9115646258503401,0.011782658554890335,3
-anomalydino,AnomalyDINO,1,cashew,mean_segmentation_au_roc,0.9811763313622123,0.0014942470285831358,3
-anomalydino,AnomalyDINO,1,cashew,mean_au_pro,0.9623431425235486,0.003984848289218427,3
+anomalydino,AnomalyDINO,1,cashew,mean_segmentation_au_roc,0.9896917042029382,0.0008855165475103321,3
 anomalydino,AnomalyDINO,1,chewinggum,mean_classification_au_roc,0.9849999999999999,0.00504777178564964,3
-anomalydino,AnomalyDINO,1,chewinggum,mean_classification_ap,0.9932482077541408,0.001942572711870952,3
+anomalydino,AnomalyDINO,1,chewinggum,mean_classification_ap,0.9932489236762484,0.0019418492256639225,3
 anomalydino,AnomalyDINO,1,chewinggum,mean_classification_f1,0.965158834724052,0.005127881682956316,3
-anomalydino,AnomalyDINO,1,chewinggum,mean_segmentation_au_roc,0.9939379835026307,0.0001072607994168257,3
-anomalydino,AnomalyDINO,1,chewinggum,mean_au_pro,0.9530573145037501,0.004283886992565044,3
+anomalydino,AnomalyDINO,1,chewinggum,mean_segmentation_au_roc,0.9954929117271885,0.00018996961424484548,3
 anomalydino,AnomalyDINO,1,fryum,mean_classification_au_roc,0.9572666666666666,0.01629273866890811,3
 anomalydino,AnomalyDINO,1,fryum,mean_classification_ap,0.9816408328179252,0.006755609784442443,3
 anomalydino,AnomalyDINO,1,fryum,mean_classification_f1,0.9271445801296547,0.01146672344548157,3
-anomalydino,AnomalyDINO,1,fryum,mean_segmentation_au_roc,0.9544131611746876,0.001961469845101373,3
-anomalydino,AnomalyDINO,1,fryum,mean_au_pro,0.933166087208629,0.0015207955448167463,3
+anomalydino,AnomalyDINO,1,fryum,mean_segmentation_au_roc,0.9664008926140427,0.001538165111476249,3
 anomalydino,AnomalyDINO,1,pipe_fryum,mean_classification_au_roc,0.9213999999999999,0.02784744153418761,3
 anomalydino,AnomalyDINO,1,pipe_fryum,mean_classification_ap,0.9583791245801456,0.016857193797056653,3
 anomalydino,AnomalyDINO,1,pipe_fryum,mean_classification_f1,0.9033258909185692,0.016512760994920564,3
-anomalydino,AnomalyDINO,1,pipe_fryum,mean_segmentation_au_roc,0.9871778283359255,0.00032063411129261844,3
-anomalydino,AnomalyDINO,1,pipe_fryum,mean_au_pro,0.9822632495638507,0.0014022240881940195,3
-anomalydino,AnomalyDINO,2,candle,mean_classification_au_roc,0.9191666666666668,0.011839059647342484,3
-anomalydino,AnomalyDINO,2,candle,mean_classification_ap,0.9279315148799091,0.007887704453231245,3
+anomalydino,AnomalyDINO,1,pipe_fryum,mean_segmentation_au_roc,0.9907714976951588,0.0004292554702549871,3
+anomalydino,AnomalyDINO,2,candle,mean_classification_au_roc,0.9191833333333334,0.01186110590684246,3
+anomalydino,AnomalyDINO,2,candle,mean_classification_ap,0.9279346794368711,0.007892755108544647,3
 anomalydino,AnomalyDINO,2,candle,mean_classification_f1,0.8591994817340954,0.015563500630270653,3
-anomalydino,AnomalyDINO,2,candle,mean_segmentation_au_roc,0.9539268620908651,0.0004755574155977477,3
-anomalydino,AnomalyDINO,2,candle,mean_au_pro,0.8804768365295592,0.004935706466230612,3
-anomalydino,AnomalyDINO,2,capsules,mean_classification_au_roc,0.9775555555555555,0.007032332735565256,3
-anomalydino,AnomalyDINO,2,capsules,mean_classification_ap,0.9869745007397209,0.0039625165206737395,3
+anomalydino,AnomalyDINO,2,candle,mean_segmentation_au_roc,0.9864394135961846,0.00034457704240885376,3
+anomalydino,AnomalyDINO,2,capsules,mean_classification_au_roc,0.9775555555555556,0.00703233273556532,3
+anomalydino,AnomalyDINO,2,capsules,mean_classification_ap,0.9869777134098153,0.0039596847012714695,3
 anomalydino,AnomalyDINO,2,capsules,mean_classification_f1,0.9419889003825755,0.010063870466237749,3
-anomalydino,AnomalyDINO,2,capsules,mean_segmentation_au_roc,0.9193842927032695,0.002781934973177753,3
-anomalydino,AnomalyDINO,2,capsules,mean_au_pro,0.9062462215298533,0.005136092722797625,3
+anomalydino,AnomalyDINO,2,capsules,mean_segmentation_au_roc,0.9586467524787167,0.001889750493734222,3
 anomalydino,AnomalyDINO,2,cashew,mean_classification_au_roc,0.9342,0.0019078784028339663,3
 anomalydino,AnomalyDINO,2,cashew,mean_classification_ap,0.9691129336708973,0.000773738365624905,3
 anomalydino,AnomalyDINO,2,cashew,mean_classification_f1,0.911965811965812,0.011562178853392054,3
-anomalydino,AnomalyDINO,2,cashew,mean_segmentation_au_roc,0.9855194432443718,0.0019625534572970623,3
-anomalydino,AnomalyDINO,2,cashew,mean_au_pro,0.9682885924082766,0.0065208900761134685,3
+anomalydino,AnomalyDINO,2,cashew,mean_segmentation_au_roc,0.9923812962315145,0.0010830347018704134,3
 anomalydino,AnomalyDINO,2,chewinggum,mean_classification_au_roc,0.9857333333333332,0.002419366308216548,3
 anomalydino,AnomalyDINO,2,chewinggum,mean_classification_ap,0.9936217114967741,0.0009982706933135887,3
 anomalydino,AnomalyDINO,2,chewinggum,mean_classification_f1,0.9631452903727226,0.008122339723056685,3
-anomalydino,AnomalyDINO,2,chewinggum,mean_segmentation_au_roc,0.9940620745716382,0.000382849189206098,3
-anomalydino,AnomalyDINO,2,chewinggum,mean_au_pro,0.9540793065698016,0.002615844614460445,3
-anomalydino,AnomalyDINO,2,fryum,mean_classification_au_roc,0.9701333333333334,0.00930447920806613,3
+anomalydino,AnomalyDINO,2,chewinggum,mean_segmentation_au_roc,0.9955550518554385,0.0002449750337962457,3
+anomalydino,AnomalyDINO,2,fryum,mean_classification_au_roc,0.9701333333333334,0.009304479208066074,3
 anomalydino,AnomalyDINO,2,fryum,mean_classification_ap,0.9871264828020779,0.0037087919427917365,3
 anomalydino,AnomalyDINO,2,fryum,mean_classification_f1,0.9504626562666951,0.008889089399002082,3
-anomalydino,AnomalyDINO,2,fryum,mean_segmentation_au_roc,0.9584323504578348,0.0020428662918995336,3
-anomalydino,AnomalyDINO,2,fryum,mean_au_pro,0.938633832004048,0.001285902309848147,3
+anomalydino,AnomalyDINO,2,fryum,mean_segmentation_au_roc,0.9693368375226536,0.0021493156133933714,3
 anomalydino,AnomalyDINO,2,pipe_fryum,mean_classification_au_roc,0.9327333333333333,0.022642732461726715,3
-anomalydino,AnomalyDINO,2,pipe_fryum,mean_classification_ap,0.9648128867135206,0.013462943167401547,3
+anomalydino,AnomalyDINO,2,pipe_fryum,mean_classification_ap,0.9648128867135206,0.013462943167401466,3
 anomalydino,AnomalyDINO,2,pipe_fryum,mean_classification_f1,0.9131562807100692,0.019629220073394637,3
-anomalydino,AnomalyDINO,2,pipe_fryum,mean_segmentation_au_roc,0.9874018641228437,0.0016174947405640896,3
-anomalydino,AnomalyDINO,2,pipe_fryum,mean_au_pro,0.9836302967480054,0.0010604689271091112,3
-anomalydino,AnomalyDINO,4,candle,mean_classification_au_roc,0.9279666666666667,0.010414573122952957,3
-anomalydino,AnomalyDINO,4,candle,mean_classification_ap,0.9387593488323072,0.008688659943563154,3
-anomalydino,AnomalyDINO,4,candle,mean_classification_f1,0.888025834813635,0.01608109774620506,3
-anomalydino,AnomalyDINO,4,candle,mean_segmentation_au_roc,0.9552634950587536,0.00013072496309166846,3
-anomalydino,AnomalyDINO,4,candle,mean_au_pro,0.8846314149629411,0.003143944446343196,3
+anomalydino,AnomalyDINO,2,pipe_fryum,mean_segmentation_au_roc,0.9905276174366487,0.0016057470616608728,3
+anomalydino,AnomalyDINO,4,candle,mean_classification_au_roc,0.92795,0.010407569360806593,3
+anomalydino,AnomalyDINO,4,candle,mean_classification_ap,0.9387287709445863,0.008660397722080047,3
+anomalydino,AnomalyDINO,4,candle,mean_classification_f1,0.8865199890866836,0.014692646161042426,3
+anomalydino,AnomalyDINO,4,candle,mean_segmentation_au_roc,0.9873053974059701,0.00016559759200927956,3
 anomalydino,AnomalyDINO,4,capsules,mean_classification_au_roc,0.9806111111111111,0.007632775331375904,3
 anomalydino,AnomalyDINO,4,capsules,mean_classification_ap,0.9886875569123023,0.0043702012744048935,3
 anomalydino,AnomalyDINO,4,capsules,mean_classification_f1,0.9408677748129873,0.01815810518943154,3
-anomalydino,AnomalyDINO,4,capsules,mean_segmentation_au_roc,0.9254836254689421,0.002491415989833104,3
-anomalydino,AnomalyDINO,4,capsules,mean_au_pro,0.9152937046884521,0.004769572085428857,3
+anomalydino,AnomalyDINO,4,capsules,mean_segmentation_au_roc,0.9615656802900259,0.0008348408931054765,3
 anomalydino,AnomalyDINO,4,cashew,mean_classification_au_roc,0.9330666666666666,0.013455606018806148,3
 anomalydino,AnomalyDINO,4,cashew,mean_classification_ap,0.9672065578102327,0.007054199675884369,3
 anomalydino,AnomalyDINO,4,cashew,mean_classification_f1,0.9144431094557252,0.0038694694502634623,3
-anomalydino,AnomalyDINO,4,cashew,mean_segmentation_au_roc,0.9872662072628401,0.001296009274615785,3
-anomalydino,AnomalyDINO,4,cashew,mean_au_pro,0.9699991764916311,0.005156609273757203,3
-anomalydino,AnomalyDINO,4,chewinggum,mean_classification_au_roc,0.9895333333333333,0.002138535324312746,3
-anomalydino,AnomalyDINO,4,chewinggum,mean_classification_ap,0.9952966358627252,0.0010666809685517572,3
+anomalydino,AnomalyDINO,4,cashew,mean_segmentation_au_roc,0.9933194784374857,0.0006355813883780843,3
+anomalydino,AnomalyDINO,4,chewinggum,mean_classification_au_roc,0.9894999999999999,0.002080865204668508,3
+anomalydino,AnomalyDINO,4,chewinggum,mean_classification_ap,0.9952664160825053,0.0010144004551861882,3
 anomalydino,AnomalyDINO,4,chewinggum,mean_classification_f1,0.9699587385794283,0.004421010902445276,3
-anomalydino,AnomalyDINO,4,chewinggum,mean_segmentation_au_roc,0.9944116574202732,0.0002021169113750351,3
-anomalydino,AnomalyDINO,4,chewinggum,mean_au_pro,0.9564299155610669,0.0015889242438761322,3
-anomalydino,AnomalyDINO,4,fryum,mean_classification_au_roc,0.9741333333333332,0.01005849558002252,3
-anomalydino,AnomalyDINO,4,fryum,mean_classification_ap,0.9885820843431915,0.004170541916853463,3
+anomalydino,AnomalyDINO,4,chewinggum,mean_segmentation_au_roc,0.9957283198507708,0.00010780749672656145,3
+anomalydino,AnomalyDINO,4,fryum,mean_classification_au_roc,0.9741666666666667,0.01003809410861115,3
+anomalydino,AnomalyDINO,4,fryum,mean_classification_ap,0.9885853603464675,0.004176101218326494,3
 anomalydino,AnomalyDINO,4,fryum,mean_classification_f1,0.9487877202162917,0.00900315961373663,3
-anomalydino,AnomalyDINO,4,fryum,mean_segmentation_au_roc,0.9618297347499389,0.0017538366464134388,3
-anomalydino,AnomalyDINO,4,fryum,mean_au_pro,0.9411128087573153,0.00032485066257769834,3
+anomalydino,AnomalyDINO,4,fryum,mean_segmentation_au_roc,0.9718172465681887,0.0019990318987636434,3
 anomalydino,AnomalyDINO,4,pipe_fryum,mean_classification_au_roc,0.9638,0.015615377036754509,3
 anomalydino,AnomalyDINO,4,pipe_fryum,mean_classification_ap,0.9807021900744574,0.009457439625549569,3
 anomalydino,AnomalyDINO,4,pipe_fryum,mean_classification_f1,0.939683014354067,0.00747197521738461,3
-anomalydino,AnomalyDINO,4,pipe_fryum,mean_segmentation_au_roc,0.9889960506294336,0.0004976132665809986,3
-anomalydino,AnomalyDINO,4,pipe_fryum,mean_au_pro,0.9848994696202474,0.0016233657714170248,3
-anomalydino,AnomalyDINO,8,candle,mean_classification_au_roc,0.9347333333333333,0.0034847285881877544,3
+anomalydino,AnomalyDINO,4,pipe_fryum,mean_segmentation_au_roc,0.9917665243341544,0.0004528922678061283,3
+anomalydino,AnomalyDINO,8,candle,mean_classification_au_roc,0.9347333333333334,0.003484728588187763,3
 anomalydino,AnomalyDINO,8,candle,mean_classification_ap,0.942773748547585,0.0033503952405274004,3
 anomalydino,AnomalyDINO,8,candle,mean_classification_f1,0.8927210347477432,0.01255003701048194,3
-anomalydino,AnomalyDINO,8,candle,mean_segmentation_au_roc,0.9552874360776912,0.0021944064420380657,3
-anomalydino,AnomalyDINO,8,candle,mean_au_pro,0.8832129206708902,0.009957190867304259,3
-anomalydino,AnomalyDINO,8,capsules,mean_classification_au_roc,0.9812777777777778,0.008807088895589439,3
-anomalydino,AnomalyDINO,8,capsules,mean_classification_ap,0.989117944814825,0.005247690964058077,3
+anomalydino,AnomalyDINO,8,candle,mean_segmentation_au_roc,0.9874887545672392,0.0009396635326788028,3
+anomalydino,AnomalyDINO,8,capsules,mean_classification_au_roc,0.9813055555555555,0.008796437620697076,3
+anomalydino,AnomalyDINO,8,capsules,mean_classification_ap,0.9891208003259616,0.005243810435203571,3
 anomalydino,AnomalyDINO,8,capsules,mean_classification_f1,0.9450436136615462,0.014566728758645968,3
-anomalydino,AnomalyDINO,8,capsules,mean_segmentation_au_roc,0.9285220110047927,0.0018116827153162346,3
-anomalydino,AnomalyDINO,8,capsules,mean_au_pro,0.9199270465099683,0.0027978984230026616,3
+anomalydino,AnomalyDINO,8,capsules,mean_segmentation_au_roc,0.9636158403772431,0.0010947581961297207,3
 anomalydino,AnomalyDINO,8,cashew,mean_classification_au_roc,0.9462,0.007480641683706034,3
 anomalydino,AnomalyDINO,8,cashew,mean_classification_ap,0.9734753518984517,0.0035860484807213743,3
 anomalydino,AnomalyDINO,8,cashew,mean_classification_f1,0.9272050428711699,0.006741696022311852,3
-anomalydino,AnomalyDINO,8,cashew,mean_segmentation_au_roc,0.988728297835341,0.00023811397283401308,3
-anomalydino,AnomalyDINO,8,cashew,mean_au_pro,0.9734276428549774,0.0026590547648293788,3
+anomalydino,AnomalyDINO,8,cashew,mean_segmentation_au_roc,0.9941275711147806,0.00016208092384749332,3
 anomalydino,AnomalyDINO,8,chewinggum,mean_classification_au_roc,0.9887333333333332,0.003300505011863052,3
 anomalydino,AnomalyDINO,8,chewinggum,mean_classification_ap,0.9950701882813604,0.001377374301530492,3
 anomalydino,AnomalyDINO,8,chewinggum,mean_classification_f1,0.9733333333333333,0.005773502691896262,3
-anomalydino,AnomalyDINO,8,chewinggum,mean_segmentation_au_roc,0.9943535251570431,0.0005054608732671228,3
-anomalydino,AnomalyDINO,8,chewinggum,mean_au_pro,0.956962661794787,0.00265249356574603,3
-anomalydino,AnomalyDINO,8,fryum,mean_classification_au_roc,0.9810666666666666,0.010433280085061185,3
+anomalydino,AnomalyDINO,8,chewinggum,mean_segmentation_au_roc,0.9956921152817255,0.00033702432399433256,3
+anomalydino,AnomalyDINO,8,fryum,mean_classification_au_roc,0.9811000000000001,0.0103764155660806,3
 anomalydino,AnomalyDINO,8,fryum,mean_classification_ap,0.9915072872198837,0.004202036362329118,3
 anomalydino,AnomalyDINO,8,fryum,mean_classification_f1,0.9582236956727347,0.013536519364020729,3
-anomalydino,AnomalyDINO,8,fryum,mean_segmentation_au_roc,0.9651161130685781,0.00015877853149327102,3
-anomalydino,AnomalyDINO,8,fryum,mean_au_pro,0.9454416330350573,0.0018281280056794606,3
-anomalydino,AnomalyDINO,8,pipe_fryum,mean_classification_au_roc,0.9649333333333333,0.021234249064502664,3
-anomalydino,AnomalyDINO,8,pipe_fryum,mean_classification_ap,0.9800750754584681,0.012573233224059375,3
+anomalydino,AnomalyDINO,8,fryum,mean_segmentation_au_roc,0.9744767536776177,0.0001347346220050988,3
+anomalydino,AnomalyDINO,8,pipe_fryum,mean_classification_au_roc,0.9649333333333333,0.021234249064502615,3
+anomalydino,AnomalyDINO,8,pipe_fryum,mean_classification_ap,0.9800768969520929,0.012572568639765807,3
 anomalydino,AnomalyDINO,8,pipe_fryum,mean_classification_f1,0.9499436556231687,0.016116981766391564,3
-anomalydino,AnomalyDINO,8,pipe_fryum,mean_segmentation_au_roc,0.9897812044817565,0.0003084559347604297,3
-anomalydino,AnomalyDINO,8,pipe_fryum,mean_au_pro,0.9842506771109737,0.0015714257885103677,3
+anomalydino,AnomalyDINO,8,pipe_fryum,mean_segmentation_au_roc,0.9923560462369648,0.00020658115139072706,3

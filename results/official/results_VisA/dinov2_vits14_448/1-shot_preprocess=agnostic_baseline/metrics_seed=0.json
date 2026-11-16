@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8780084419375894,
+        "seg_AUROC": 0.9533230042089598,
+        "seg_F1": 0.3235747303543913,
+        "classification_AUROC": 0.9036000000000001,
+        "classification_AP": 0.9222960266866496,
+        "classification_F1": 0.8432432432432432
+    },
+    "capsules": {
+        "seg_AUPRO": 0.8949469027046885,
+        "seg_AUROC": 0.9112164763224312,
+        "seg_F1": 0.40923737916219116,
+        "classification_AUROC": 0.9878333333333333,
+        "classification_AP": 0.993072731723725,
+        "classification_F1": 0.9560975609756097
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9606383201960728,
+        "seg_AUROC": 0.9794567125774988,
+        "seg_F1": 0.4407637451115712,
+        "classification_AUROC": 0.929,
+        "classification_AP": 0.9684671989236837,
+        "classification_F1": 0.8979591836734694
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9534846052956601,
+        "seg_AUROC": 0.9939563025236037,
+        "seg_F1": 0.6376360808709176,
+        "classification_AUROC": 0.9825999999999999,
+        "classification_AP": 0.991939004188743,
+        "classification_F1": 0.9696969696969697
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9338181582481964,
+        "seg_AUROC": 0.953117043945509,
+        "seg_F1": 0.385851618111103,
+        "classification_AUROC": 0.9451999999999999,
+        "classification_AP": 0.9760476230672449,
+        "classification_F1": 0.9166666666666666
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9806997540532183,
+        "seg_AUROC": 0.9875371588945132,
+        "seg_F1": 0.5095825285990194,
+        "classification_AUROC": 0.9288,
+        "classification_AP": 0.9642033742638706,
+        "classification_F1": 0.9054726368159204
+    },
+    "mean_au_pro": 0.9335993637392376,
+    "mean_segmentation_au_roc": 0.9631011164120858,
+    "mean_segmentation_f1": 0.45110768036819887,
+    "mean_classification_au_roc": 0.9461722222222222,
+    "mean_classification_ap": 0.9693376598089861,
+    "mean_classification_f1": 0.9148560435119798
+}

@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8861422947335681,
+        "seg_AUROC": 0.9552055561981856,
+        "seg_F1": 0.3557394002068252,
+        "classification_AUROC": 0.9309,
+        "classification_AP": 0.9441349973665949,
+        "classification_F1": 0.8989898989898989
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9198973075479754,
+        "seg_AUROC": 0.9282631142672104,
+        "seg_F1": 0.44016649323621226,
+        "classification_AUROC": 0.9891666666666667,
+        "classification_AP": 0.9935668761693799,
+        "classification_F1": 0.9607843137254902
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9695272335796522,
+        "seg_AUROC": 0.9868269821045608,
+        "seg_F1": 0.5334796926454446,
+        "classification_AUROC": 0.9256,
+        "classification_AP": 0.961428325059821,
+        "classification_F1": 0.916256157635468
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.9562635130166433,
+        "seg_AUROC": 0.9943999334643299,
+        "seg_F1": 0.6484705882352941,
+        "classification_AUROC": 0.992,
+        "classification_AP": 0.9965269526698722,
+        "classification_F1": 0.9743589743589743
+    },
+    "fryum": {
+        "seg_AUPRO": 0.9409075404544343,
+        "seg_AUROC": 0.9622142940310145,
+        "seg_F1": 0.43273231622746183,
+        "classification_AUROC": 0.9855999999999999,
+        "classification_AP": 0.9933001615221134,
+        "classification_F1": 0.9591836734693877
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9867637802072704,
+        "seg_AUROC": 0.9884843651255603,
+        "seg_F1": 0.5152880592211135,
+        "classification_AUROC": 0.9798,
+        "classification_AP": 0.9901033083471648,
+        "classification_F1": 0.9479166666666667
+    },
+    "mean_au_pro": 0.9432502782565906,
+    "mean_segmentation_au_roc": 0.969232374198477,
+    "mean_segmentation_f1": 0.4876460916287253,
+    "mean_classification_au_roc": 0.9671777777777777,
+    "mean_classification_ap": 0.9798434368558243,
+    "mean_classification_f1": 0.9429149474743143
+}

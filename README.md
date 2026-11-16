@@ -8,12 +8,17 @@ categories required by the course project:
 Project repository:
 `https://github.com/zyy2006-0904/AIAA3201-Project2-AnomalyDINO`.
 
+Team: Yifei Zhang and Yiyang Zhang.
+
+The rationale for merging the two team implementations is documented in
+[`INTEGRATION.md`](INTEGRATION.md) and [`CHANGELOG.md`](CHANGELOG.md).
+
 The project contains:
 
 1. The required normal-only template-difference baseline.
 2. A faithful AnomalyDINO reproduction using DINOv2 ViT-S/14 at 448 pixels.
 3. A controlled multi-layer DINOv2 feature-fusion improvement.
-4. Image-level and patch-grid localization metrics over three seeds.
+4. Image-level and 448-pixel localization metrics over three seeds.
 5. A single-image demo with anomaly score, OK/NG decision, and heatmap.
 
 ## Data
@@ -107,22 +112,43 @@ python scripts/run_template_baseline.py \
   --seeds 0 1 2
 ```
 
-The baseline uses the same selected references as AnomalyDINO. It chooses the
-closest template by mean absolute RGB difference, applies Gaussian smoothing,
-and uses the 95th percentile of the 20 held-out calibration scores as the
-OK/NG threshold. AUROC is computed from unthresholded scores.
+The integrated baseline uses the same selected references as AnomalyDINO and
+fuses four complementary difference maps: RGB, grayscale, gradient magnitude,
+and Gaussian SSIM. The primary `global` mode chooses one globally closest
+template, exactly matching the handout's wording. The teammate-inspired
+`per_pixel` mode is retained as an ablation:
+
+```bash
+python scripts/run_template_baseline.py \
+  --data-root data/VisA_pytorch/1cls \
+  --output results/template_ablation \
+  --shots 1 2 4 8 --seeds 0 1 2 \
+  --template-mode per_pixel --border-crop 32
+```
+
+The default score is the 99.5th percentile of the smoothed map. The 95th
+percentile of the 20 held-out calibration scores remains the OK/NG threshold.
+Full-frame 448-pixel localization is the primary evaluation; border cropping is
+not used unless explicitly requested.
 
 ## Metrics
 
 - Image AUROC, AP, and F1.
-- Patch-grid pixel AUROC, AP, and F1.
-- AUPRO with the standard 0.30 false-positive-rate limit for AnomalyDINO.
+- Full-frame 448-pixel AUROC using a fast 16-bit rank histogram.
 - Mean and standard deviation across seeds 0, 1, and 2.
 - Equal weighting of category means, as required by the project handout.
 - Inference time and peak GPU memory.
 
 Test labels are used only for final metric computation. They are not used for
 reference selection, thresholds, model selection, or score rescaling.
+The histogram-based pixel AUROC preserves rank ordering in 65,536 bins; its
+error relative to exact sklearn AUROC is below `0.001` on controlled arrays.
+
+Run the project tests with:
+
+```bash
+pytest -q tests
+```
 
 ## Verified Results
 
@@ -130,12 +156,26 @@ Mean image AUROC (%) over seeds 0, 1, and 2:
 
 | Method | 1-shot | 2-shot | 4-shot | 8-shot |
 |---|---:|---:|---:|---:|
-| Template difference | 51.5 | 52.8 | 54.5 | 56.3 |
+| Integrated template difference | 56.4 | 57.6 | 58.2 | 60.7 |
 | AnomalyDINO | 94.6 | 95.3 | 96.2 | 96.6 |
 | Multi-layer AnomalyDINO | **95.0** | **95.7** | **96.6** | **97.0** |
 
-The improvement increases image AUROC by 0.38-0.42 points at every tested
-shot count while leaving patch-level localization AUROC essentially unchanged.
+448-pixel localization AUROC (%):
+
+| Method | 1-shot | 2-shot | 4-shot | 8-shot |
+|---|---:|---:|---:|---:|
+| Integrated template difference | 56.9 | 57.1 | 57.8 | 57.9 |
+| AnomalyDINO | **98.1** | **98.2** | **98.4** | **98.5** |
+| Multi-layer AnomalyDINO | 98.0 | 98.2 | 98.3 | 98.4 |
+
+The integrated Part 1 raises image AUROC by 3.70-4.91 points over the original
+RGB-only baseline. The multi-layer improvement adds another ~0.4 image-AUROC
+point, with a small 448-pixel localization trade-off of 0.02-0.06 points.
+
+At the fixed calibration threshold, Part 1 false-positive rate drops from
+32.9-35.1% to 7.9-10.6%; false-negative rate rises from 64.8-70.1% to
+80.3-85.1%. The integrated baseline is deliberately conservative and should be
+reported as a false-alarm/recall trade-off.
 Detailed means, standard deviations, per-category metrics, failure cases, and
 efficiency measurements are under `results/` and `artifacts/`.
 

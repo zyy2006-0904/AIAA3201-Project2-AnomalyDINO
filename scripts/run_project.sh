@@ -41,6 +41,19 @@ for variant in baseline improvement; do
     "${extra[@]}"
 done
 
+for method_dir in dinov2_vits14_448 dinov2_vits14_448_layer9+11; do
+  for run_dir in "$RUN_ROOT/results_VisA/$method_dir"/*; do
+    [[ -d "$run_dir" ]] || continue
+    [[ "$run_dir" == *smoke* ]] && continue
+    for seed in 0 1 2; do
+      "$PYTHON" "$PROJECT_ROOT/scripts/rescore_anomalydino_448.py" \
+        --run-dir "$run_dir" \
+        --seed "$seed" \
+        --data-root "$DATA_ROOT"
+    done
+  done
+done
+
 "$PYTHON" "$PROJECT_ROOT/scripts/aggregate_results.py" \
   --official-root "$RUN_ROOT" \
   --template-root "$RUN_ROOT/template_results" \

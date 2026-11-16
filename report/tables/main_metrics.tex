@@ -2,22 +2,22 @@
 \centering
 \small
 \caption{Unweighted category mean and standard deviation over seeds.
-Image AUROC is shown in the upper block and patch-level pixel AUROC
-in the lower block.}
+Image AUROC is shown in the upper block and 448-pixel localization
+AUROC in the lower block.}
 \label{tab:main}
 \begin{tabular}{lcccc}
 \toprule
 Method & 1-shot & 2-shot & 4-shot & 8-shot \\
 \midrule
 \multicolumn{5}{l}{\emph{Image-level AUROC (\%)}}\\
-Template & 51.5 $\pm$ 1.0 & 52.8 $\pm$ 2.8 & 54.5 $\pm$ 3.7 & 56.3 $\pm$ 1.6 \\
+Template & 56.4 $\pm$ 1.1 & 57.6 $\pm$ 1.0 & 58.2 $\pm$ 3.4 & 60.7 $\pm$ 3.9 \\
 AnomalyDINO & 94.6 $\pm$ 1.0 & 95.3 $\pm$ 0.6 & 96.2 $\pm$ 0.5 & 96.6 $\pm$ 0.7 \\
 Multi-layer & 95.0 $\pm$ 0.7 & 95.7 $\pm$ 0.5 & 96.6 $\pm$ 0.6 & 97.0 $\pm$ 0.7 \\
 \midrule
-\multicolumn{5}{l}{\emph{Patch-level pixel AUROC (\%)}}\\
-Template & 43.0 $\pm$ 2.3 & 42.5 $\pm$ 3.8 & 41.6 $\pm$ 3.4 & 41.6 $\pm$ 1.3 \\
-AnomalyDINO & 96.4 $\pm$ 0.1 & 96.6 $\pm$ 0.1 & 96.9 $\pm$ 0.0 & 97.0 $\pm$ 0.1 \\
-Multi-layer & 96.4 $\pm$ 0.1 & 96.6 $\pm$ 0.0 & 96.9 $\pm$ 0.0 & 97.1 $\pm$ 0.1 \\
+\multicolumn{5}{l}{\emph{448-pixel localization AUROC (\%)}}\\
+Template & 56.9 $\pm$ 0.5 & 57.1 $\pm$ 0.8 & 57.8 $\pm$ 1.4 & 57.9 $\pm$ 0.5 \\
+AnomalyDINO & 98.1 $\pm$ 0.1 & 98.2 $\pm$ 0.1 & 98.4 $\pm$ 0.0 & 98.5 $\pm$ 0.0 \\
+Multi-layer & 98.0 $\pm$ 0.0 & 98.2 $\pm$ 0.0 & 98.3 $\pm$ 0.0 & 98.4 $\pm$ 0.0 \\
 \bottomrule
 \end{tabular}
 \end{table*}

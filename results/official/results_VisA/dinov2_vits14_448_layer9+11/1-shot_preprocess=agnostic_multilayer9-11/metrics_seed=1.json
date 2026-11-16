@@ -1,0 +1,56 @@
+{
+    "candle": {
+        "seg_AUPRO": 0.8839917332937468,
+        "seg_AUROC": 0.9519740867673658,
+        "seg_F1": 0.31711711711711715,
+        "classification_AUROC": 0.8937,
+        "classification_AP": 0.9130521675338371,
+        "classification_F1": 0.8529411764705882
+    },
+    "capsules": {
+        "seg_AUPRO": 0.9042842218894391,
+        "seg_AUROC": 0.9211970489694064,
+        "seg_F1": 0.4008159102498725,
+        "classification_AUROC": 0.9776666666666667,
+        "classification_AP": 0.9870234494776877,
+        "classification_F1": 0.9365853658536586
+    },
+    "cashew": {
+        "seg_AUPRO": 0.9570982917445942,
+        "seg_AUROC": 0.9756301565889978,
+        "seg_F1": 0.4306439297531178,
+        "classification_AUROC": 0.9312,
+        "classification_AP": 0.9660503014530036,
+        "classification_F1": 0.904109589041096
+    },
+    "chewinggum": {
+        "seg_AUPRO": 0.949228286550735,
+        "seg_AUROC": 0.993393275352001,
+        "seg_F1": 0.6423094271538115,
+        "classification_AUROC": 0.9936,
+        "classification_AP": 0.9968578037116326,
+        "classification_F1": 0.9702970297029702
+    },
+    "fryum": {
+        "seg_AUPRO": 0.93616165682949,
+        "seg_AUROC": 0.956567906390155,
+        "seg_F1": 0.3716910513780197,
+        "classification_AUROC": 0.9542,
+        "classification_AP": 0.9806698872955493,
+        "classification_F1": 0.9340101522842639
+    },
+    "pipe_fryum": {
+        "seg_AUPRO": 0.9829555177372004,
+        "seg_AUROC": 0.9867190921698378,
+        "seg_F1": 0.5116060225846926,
+        "classification_AUROC": 0.9081999999999999,
+        "classification_AP": 0.94870646890726,
+        "classification_F1": 0.8899082568807339
+    },
+    "mean_au_pro": 0.9356199513408675,
+    "mean_segmentation_au_roc": 0.9642469277062938,
+    "mean_segmentation_f1": 0.44569724303943853,
+    "mean_classification_au_roc": 0.9430944444444446,
+    "mean_classification_ap": 0.9653933463964951,
+    "mean_classification_f1": 0.9146419283722184
+}
