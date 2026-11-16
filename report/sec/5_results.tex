@@ -40,10 +40,13 @@ Error bars show one standard deviation over three seeds.}
 The improvement is intentionally conservative. It changes only how patch
 features are formed, allowing changes in AUROC, AP, and localization to be
 attributed to the use of blocks 9 and 11. The fused method improves image
-AUROC by roughly 0.4 points at every shot count. On the common 448-pixel
-localization grid, pixel AUROC decreases slightly, by 0.02-0.06 points. This
-is reported as a small detection/localization trade-off rather than claiming
-that the improvement dominates every metric.
+AUROC by roughly 0.4 points at every shot count. That gain is smaller than the
+seed standard deviation of 0.5--0.7 points; its direction is consistent across
+all four shot settings, but we report it as a low-variance change rather than a
+significant improvement. On the common 448-pixel localization grid, pixel AUROC
+decreases slightly, by 0.02-0.06 points. The result is therefore presented as a
+small detection/localization trade-off rather than a claim that the improvement
+dominates every metric.
 
 \subsection{Per-Category Behavior}
 Large object categories such as candle provide many possible normal poses and

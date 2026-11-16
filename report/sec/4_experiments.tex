@@ -50,6 +50,13 @@ are evaluated on a common $448\times448$ grid. Pixel AUROC uses a monotonic
 AUROC is below $10^{-3}$. This improves localization fidelity over the earlier
 native patch-grid calculation while keeping the full matrix tractable.
 
+All methods are scored on the complete $448\times448$ frame: no border margin is
+cropped and no per-image score rescaling is applied. AnomalyDINO predicts on its
+patch grid, so its maps are resampled to the same frame before scoring, whereas
+the template baseline is computed directly at that resolution. Excluding a
+border margin raises the template baseline's pixel AUROC by several points, so
+the common full frame is stated explicitly to keep the comparison like-for-like.
+
 \subsection{Efficiency Protocol}
 Peak GPU memory is measured after resetting CUDA statistics and loading the
 model. Mean inference time is read from per-image measurements and includes
