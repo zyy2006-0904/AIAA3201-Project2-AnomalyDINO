@@ -59,6 +59,16 @@ def official_runs(root: Path) -> dict[str, dict[int, dict[int, Path]]]:
         seed = int(metrics_path.stem.split("=", 1)[1])
         method = "multilayer" if "multilayer" in run_dir else "anomalydino"
         runs[method][shot][seed] = metrics_path
+    for metrics_path in root.glob(
+        "results_VisA/dinov2_vits14_448*/*/metrics_448_seed=*.json"
+    ):
+        run_dir = metrics_path.parent.name
+        if "smoke" in run_dir:
+            continue
+        shot = int(run_dir.split("-shot", 1)[0])
+        seed = int(metrics_path.stem.rsplit("=", 1)[1])
+        method = "multilayer" if "multilayer" in run_dir else "anomalydino"
+        runs[method][shot][seed] = metrics_path
     return runs
 
 
