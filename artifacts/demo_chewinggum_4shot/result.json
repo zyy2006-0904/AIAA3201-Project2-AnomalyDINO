@@ -1,5 +1,5 @@
 {
-  "image": "/data/disk1/home/yzhang201/aiaa3201_project2/data/VisA_pytorch/1cls/chewinggum/test/bad/000.JPG",
+  "image": "<PROJECT_ROOT>/data/VisA_pytorch/1cls/chewinggum/test/bad/000.JPG",
   "category": "chewinggum",
   "shot": 4,
   "seed": 0,

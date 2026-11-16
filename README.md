@@ -42,6 +42,11 @@ Python 3.10, PyTorch 2.7.1 with CUDA 12.6, torchvision 0.22.1, FAISS CPU, and
 the remaining dependencies in `requirements.txt` are sufficient. DINOv2 weights
 are downloaded by `torch.hub`.
 
+`faiss-cpu` is pinned in `requirements.txt` so the environment installs without a
+GPU toolchain. Swapping in `faiss-gpu-cu12` and dropping `--faiss_on_cpu` is
+supported and much faster (the reported runs use the GPU index); the numbers do
+not change, only the runtime.
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -139,6 +144,20 @@ not used unless explicitly requested.
 - Equal weighting of category means, as required by the project handout.
 - Inference time and peak GPU memory.
 
+**Evaluation frame.** Every method is scored on the complete 448x448 frame: no
+border cropping and no per-image score rescaling. AnomalyDINO produces its map
+on the patch grid, so the saved maps are resampled to 448 px before scoring; the
+template baseline is computed directly at 448 px. Because the frame is identical
+for all rows, the comparison in the results table is like-for-like. Excluding a
+border margin would raise the baseline's pixel AUROC by several points, which is
+why the choice is stated explicitly rather than left implicit.
+
+**Not reported: AUPRO.** The handout marks AUPRO as optional and requires the
+official 0.30 FPR cap when it is reported. We do not report it: the six-class run
+takes several minutes per condition in the reference implementation, and the two
+required metrics (image AUROC, pixel AUROC) already separate the methods
+decisively.
+
 Test labels are used only for final metric computation. They are not used for
 reference selection, thresholds, model selection, or score rescaling.
 The histogram-based pixel AUROC preserves rank ordering in 65,536 bins; its
@@ -159,6 +178,15 @@ Mean image AUROC (%) over seeds 0, 1, and 2:
 | Integrated template difference | 56.4 | 57.6 | 58.2 | 60.7 |
 | AnomalyDINO | 94.6 | 95.3 | 96.2 | 96.6 |
 | Multi-layer AnomalyDINO | **95.0** | **95.7** | **96.6** | **97.0** |
+
+A note on reading the last two rows: the multi-layer fusion gains about 0.4
+image-AUROC points at every shot count, which is **smaller than the seed
+standard deviation** (0.5-0.7 points). The direction is consistent across all
+four shot settings, but we report it as a conservative, low-variance change
+rather than a significant improvement, and pixel AUROC in fact decreases by
+0.02-0.06 points. No per-seed paired deltas are stored in this repository, so a
+paired significance test cannot be reconstructed from the released results.
+
 
 448-pixel localization AUROC (%):
 

@@ -1,4 +1,4 @@
-data_root: /data/disk1/home/yzhang201/aiaa3201_project2/data/VisA_pytorch/1cls
+data_root: <PROJECT_ROOT>/data/VisA_pytorch/1cls
 dataset: VisA
 device: cuda:0
 eval_clf: true
